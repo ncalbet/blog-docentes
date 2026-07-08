@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
+<section class="post-list">
+  <h1 class="visually-hidden">Artículos</h1>
+  {% for post in site.posts %}
+    {% assign m = post.date | date: "%-m" | minus: 1 %}
+    <article class="post-preview">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-meta">{{ post.date | date: "%-d" }} de {{ meses[m] }} de {{ post.date | date: "%Y" }}</p>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </article>
+  {% endfor %}
+
+  {% if site.posts.size == 0 %}
+    <p>Todavía no hay artículos publicados. Muy pronto.</p>
+  {% endif %}
+</section>
