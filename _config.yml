@@ -1,0 +1,23 @@
+title: Blog Docentes
+description: "IA y educación con mirada crítica, de docente a docente"
+lang: es
+# URL definitiva quan hi hagi domini propi; mentrestant GitHub Pages de projecte
+url: ""
+baseurl: "/blog-docentes"
+
+author:
+  name: ""   # pendent: nom públic de l'autor/marca
+
+markdown: kramdown
+permalink: /:year/:month/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# jekyll-feed genera /feed.xml automàticament (clau per a l'RSS del blog)
+feed:
+  posts_limit: 20
+
+exclude:
+  - README.md
