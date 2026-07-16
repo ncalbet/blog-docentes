@@ -1,12 +1,12 @@
-title: Blog Docentes
+title: Mesa Docente
 description: "IA y educación con mirada crítica, de docente a docente"
 lang: es
-# URL definitiva quan hi hagi domini propi; mentrestant GitHub Pages de projecte
-url: ""
-baseurl: "/blog-docentes"
+# Domini propi (apex): baseurl buit perquè el lloc se serveix a l'arrel, no a /blog-docentes/
+url: "https://mesadocente.com"
+baseurl: ""
 
 author:
-  name: ""   # pendent: nom públic de l'autor/marca
+  name: "Mesa Docente"   # marca; canvia-ho pel teu nom personal si vols signar els articles amb ell
 
 markdown: kramdown
 permalink: /:year/:month/:title/
