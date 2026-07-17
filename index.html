@@ -1,19 +1,50 @@
 ---
 layout: default
 ---
-{% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
-<section class="post-list">
-  <h1 class="visually-hidden">Artículos</h1>
-  {% for post in site.posts %}
-    {% assign m = post.date | date: "%-m" | minus: 1 %}
-    <article class="post-preview">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: "%-d" }} de {{ meses[m] }} de {{ post.date | date: "%Y" }}</p>
-      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
-    </article>
-  {% endfor %}
+<div class="fade-in">
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Publicación independiente</p>
+      <h1 class="hero__title">{{ site.description | default: "Inteligencia artificial y educación, con evidencia y con derechos." }}</h1>
+      <p class="hero__lead">Un artículo de fondo cada dos semanas. Investigación verificable que aterriza en el aula, en el trabajo docente y en los derechos de quienes enseñan y aprenden. Escrito de colega a colega.</p>
+    </div>
+  </section>
 
-  {% if site.posts.size == 0 %}
-    <p>Todavía no hay artículos publicados. Muy pronto.</p>
-  {% endif %}
-</section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Artículos</h2></div>
+
+      {%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
+      {% if site.posts.size > 0 %}
+      <ul class="post-list">
+        {% for post in site.posts %}
+        {%- assign mes = post.date | date: "%-m" | minus: 1 -%}
+        {%- assign palabras = post.content | number_of_words -%}
+        {%- assign lectura = palabras | divided_by: 200 | plus: 1 -%}
+        <li class="post-item">
+          <a href="{{ post.url | relative_url }}">
+            <p class="post-item__meta">{{ post.date | date: "%-d" }} de {{ meses[mes] }} de {{ post.date | date: "%Y" }} &middot; {{ lectura }} min de lectura</p>
+            <h3 class="post-item__title">{{ post.title }}</h3>
+            {% if post.description %}<p class="post-item__dek">{{ post.description }}</p>{% endif %}
+            <span class="post-item__more">Leer el artículo <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <!-- Estado «recién lanzado / sin artículos todavía» -->
+      <div class="empty-state">
+        {% include mesa-mark.html size="40" simple="true" %}
+        <h2>La mesa está puesta; el primer artículo llega pronto.</h2>
+        <p>Publicamos un texto de fondo cada dos semanas. Deja tu correo y te aviso en cuanto esté el primero.</p>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {% include newsletter.html id="nl-home" %}
+    </div>
+  </section>
+</div>

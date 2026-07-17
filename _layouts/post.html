@@ -1,15 +1,37 @@
 ---
 layout: default
 ---
-{% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
-{% assign m = page.date | date: "%-m" | minus: 1 %}
-<article class="post">
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%-d" }} de {{ meses[m] }} de {{ page.date | date: "%Y" }}</p>
-  </header>
+{%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
+{%- assign mes = page.date | date: "%-m" | minus: 1 -%}
+{%- assign palabras = content | number_of_words -%}
+{%- assign lectura = palabras | divided_by: 200 | plus: 1 -%}
+<div class="fade-in">
+  <article>
+    <header class="article-header">
+      <div class="container"><div class="reading">
+        <a class="back-link" href="{{ '/' | relative_url }}"><span aria-hidden="true">&larr;</span> Todos los artículos</a>
+        {% if page.category %}<p class="eyebrow eyebrow--accent">{{ page.category }}</p>{% endif %}
+        <h1 class="article-title">{{ page.title }}</h1>
+        {% if page.description %}<p class="article-dek">{{ page.description }}</p>{% endif %}
+        <p class="article-meta">Publicado el {{ page.date | date: "%-d" }} de {{ meses[mes] }} de {{ page.date | date: "%Y" }} &middot; {{ lectura }} min de lectura</p>
+      </div></div>
+    </header>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
-</article>
+    <div class="container"><div class="reading prose">
+      {{ content }}
+    </div></div>
+
+    <div class="container"><div class="reading">
+      <div class="byline">
+        {% include mesa-mark.html size="34" %}
+        <p><strong>Escrito por {{ site.author.name | default: "el autor" }}.</strong> {{ site.author.bio | default: "Profesor de secundaria en activo, doctor en Derechos Humanos y colaborador universitario. Escribe en Mesa Docente de colega a colega." }}</p>
+      </div>
+    </div></div>
+
+    <section class="section">
+      <div class="container">
+        {% include newsletter.html id="nl-post" title="Si este texto te sirvió, te aviso del próximo" text="Un artículo cada dos semanas. Puedes darte de baja cuando quieras." %}
+      </div>
+    </section>
+  </article>
+</div>
