@@ -1,0 +1,26 @@
+{%- comment -%}
+  Bloque de suscripción reutilizable. Parámetros opcionales:
+  title, text, id (id único del campo de correo por página).
+{%- endcomment -%}
+<div class="newsletter">
+  <div class="newsletter__grid">
+    <div>
+      <p class="eyebrow eyebrow--accent">Suscríbete</p>
+      <h2>{{ include.title | default: "Recibe cada entrega en tu correo" }}</h2>
+      <p>{{ include.text | default: "Un artículo cada dos semanas, directo a tu bandeja. Puedes darte de baja cuando quieras." }}</p>
+    </div>
+    <div>
+      <!-- ================================================================= -->
+      <!--  FORMULARIO EMBED DE BREVO                                        -->
+      <!--  Pega aquí el código <form> que genera Brevo y borra el           -->
+      <!--  formulario de marcador que hay justo debajo (es solo visual).    -->
+      <!-- ================================================================= -->
+      <form class="newsletter-form" action="#" method="post">
+        <label class="visually-hidden" for="{{ include.id | default: 'nl' }}">Correo electrónico</label>
+        <input class="field" id="{{ include.id | default: 'nl' }}" type="email" name="email" placeholder="tu@correo.com" autocomplete="email" required>
+        <button class="btn" type="submit">Suscribirme</button>
+      </form>
+      <p class="newsletter__fine">Solo los artículos. Tu correo se queda entre nosotros.</p>
+    </div>
+  </div>
+</div>
