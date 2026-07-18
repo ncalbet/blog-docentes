@@ -16,6 +16,14 @@
 
   {%- if site.plugins contains "jekyll-feed" or jekyll.environment -%}{% feed_meta %}{%- endif -%}
   {% seo %}
+
+  {%- comment -%} Analítica: inert fins que es defineixi plausible_domain O ga4_id a _config.yml {%- endcomment -%}
+  {%- if site.plausible_domain %}
+  <script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/script.js"></script>
+  {%- elsif site.ga4_id %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_id }}"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site.ga4_id }}');</script>
+  {%- endif %}
 </head>
 <body class="page">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>

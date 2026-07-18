@@ -14,6 +14,12 @@ permalink: /:year/:month/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap   # genera /sitemap.xml automàticament (suportat de sèrie per GitHub Pages)
+
+# Analítica — descomenta UNA de les dues línies quan tinguis el compte creat, i fes push.
+# El snippet corresponent (a _layouts/default.html) no es renderitza mentre això estigui comentat.
+# plausible_domain: mesadocente.com     # Plausible: sense cookies ni banner (coherent amb la marca), de pagament
+# ga4_id: G-XXXXXXXXXX                  # Google Analytics 4: gratis, però a la UE demana avís de cookies
 
 # jekyll-feed genera /feed.xml automàticament (clau per a l'RSS del blog)
 feed:
