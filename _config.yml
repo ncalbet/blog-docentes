@@ -16,6 +16,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap   # genera /sitemap.xml automàticament (suportat de sèrie per GitHub Pages)
 
+# Verificació de propietat de Google Search Console — jekyll-seo-tag ho converteix
+# en <meta name="google-site-verification" ...> a l'<head>. No treure-ho mai (mantén la verificació).
+google_site_verification: swNyEfqKqPBAqIyHvsdisd8X_7BZ8OlIki04tJaJrO4
+
 # Analítica — descomenta UNA línia quan tinguis el compte creat, i fes push.
 # El snippet corresponent (a _layouts/default.html) no es renderitza mentre això estigui comentat.
 cf_analytics_token: "916a1eec55f8441c9126e7ffffb494fe"   # Cloudflare Web Analytics: gratis, sense cookies ni banner (ACTIU)
