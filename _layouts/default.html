@@ -17,8 +17,10 @@
   {%- if site.plugins contains "jekyll-feed" or jekyll.environment -%}{% feed_meta %}{%- endif -%}
   {% seo %}
 
-  {%- comment -%} Analítica: inert fins que es defineixi plausible_domain O ga4_id a _config.yml {%- endcomment -%}
-  {%- if site.plausible_domain %}
+  {%- comment -%} Analítica: inert fins que es defineixi cf_analytics_token, plausible_domain O ga4_id a _config.yml {%- endcomment -%}
+  {%- if site.cf_analytics_token %}
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cf_analytics_token }}"}'></script>
+  {%- elsif site.plausible_domain %}
   <script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/script.js"></script>
   {%- elsif site.ga4_id %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_id }}"></script>
