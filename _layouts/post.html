@@ -10,7 +10,7 @@ layout: default
     <header class="article-header">
       <div class="container"><div class="reading">
         <a class="back-link" href="{{ '/' | relative_url }}"><span aria-hidden="true">&larr;</span> Todos los artículos</a>
-        {% if page.category %}<p class="eyebrow eyebrow--accent">{{ page.category }}</p>{% endif %}
+        {% if page.category %}{%- assign tema = site.data.temas | where: "slug", page.category | first -%}<p class="eyebrow eyebrow--accent"><a class="eyebrow-link" href="{{ '/temas/' | relative_url }}#{{ page.category }}">{{ tema.nombre | default: page.category }}</a></p>{% endif %}
         <h1 class="article-title">{{ page.title }}</h1>
         {% if page.description %}<p class="article-dek">{{ page.description }}</p>{% endif %}
         <p class="article-meta">Publicado el {{ page.date | date: "%-d" }} de {{ meses[mes] }} de {{ page.date | date: "%Y" }} &middot; {{ lectura }} min de lectura</p>

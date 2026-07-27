@@ -24,6 +24,8 @@ layout: default
         <li class="post-item">
           <a href="{{ post.url | relative_url }}">
             <p class="post-item__meta">{{ post.date | date: "%-d" }} de {{ meses[mes] }} de {{ post.date | date: "%Y" }} &middot; {{ lectura }} min de lectura</p>
+            {%- if post.category -%}{%- assign tema = site.data.temas | where: "slug", post.category | first -%}
+            <p class="post-item__cat">{{ tema.nombre | default: post.category }}</p>{%- endif -%}
             <h3 class="post-item__title">{{ post.title }}</h3>
             {% if post.description %}<p class="post-item__dek">{{ post.description }}</p>{% endif %}
             <span class="post-item__more">Leer el artículo <span aria-hidden="true">&rarr;</span></span>
