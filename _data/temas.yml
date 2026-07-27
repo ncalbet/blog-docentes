@@ -1,0 +1,18 @@
+# Los 5 hilos (dominios) de Mesa Docente. El `slug` es la categoría que llevan
+# los posts en su front matter (`category: <slug>`); `nombre` y `lema` son lo que
+# se muestra. El orden de esta lista es el orden en que aparecen en /temas/.
+- slug: autonomia-cognitiva
+  nombre: "Pensar con la IA"
+  lema: "Aprovechar la IA como apoyo del razonamiento, con el criterio en manos de quien aprende."
+- slug: privacidad-vigilancia
+  nombre: "Datos y privacidad"
+  lema: "Qué se registra de cada estudiante, con qué finalidad y con qué límites, sobre todo con menores."
+- slug: garantias
+  nombre: "Decisiones justas"
+  lema: "Qué garantías y qué derecho a réplica hacen falta cuando un sistema evalúa o decide sobre alguien."
+- slug: equidad
+  nombre: "Cerrar brechas"
+  lema: "Que la IA llegue también a quien parte con menos recursos y acorte distancias."
+- slug: docencia
+  nombre: "Criterio docente"
+  lema: "Formación y herramientas que fortalezcan el juicio profesional del profesorado."

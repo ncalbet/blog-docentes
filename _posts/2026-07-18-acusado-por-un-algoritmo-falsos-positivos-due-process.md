@@ -1,5 +1,6 @@
 ---
 layout: post
+category: garantias
 title: "Acusado por un algoritmo: falsos positivos, due process y el precio invisible de equivocarse"
 description: "Un estudiante de Historia del Arte llamado Nicole confía en que Turnitin es suficiente para detectar el uso de IA con precisión, y concluye que la…"
 ---

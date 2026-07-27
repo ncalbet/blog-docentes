@@ -39,6 +39,7 @@
       <div class="header-actions">
         <nav class="nav" aria-label="Principal">
           <a class="nav__link" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Inicio</a>
+          <a class="nav__link" href="{{ '/temas/' | relative_url }}"{% if page.url contains 'temas' %} aria-current="page"{% endif %}>Temas</a>
           <a class="nav__link" href="{{ '/sobre/' | relative_url }}"{% if page.url contains 'sobre' %} aria-current="page"{% endif %}>Sobre este blog</a>
           <a class="nav__link" href="{{ '/feed.xml' | relative_url }}">RSS</a>
         </nav>
@@ -67,6 +68,7 @@
         <nav class="footer-nav" aria-label="Enlaces del pie">
           <span class="label">Navegar</span>
           <a href="{{ '/' | relative_url }}">Inicio</a>
+          <a href="{{ '/temas/' | relative_url }}">Temas</a>
           <a href="{{ '/sobre/' | relative_url }}">Sobre este blog</a>
           <a href="{{ '/feed.xml' | relative_url }}">RSS (feed.xml)</a>
         </nav>

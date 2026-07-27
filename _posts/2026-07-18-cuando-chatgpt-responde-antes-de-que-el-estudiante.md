@@ -1,5 +1,6 @@
 ---
 layout: post
+category: autonomia-cognitiva
 title: "Cuando ChatGPT responde antes de que el estudiante pueda preguntarse"
 description: "Hay un momento pedagógico que los docentes conocen bien: el instante de duda en que un estudiante no sabe cómo continuar. Durante décadas, ese momento…"
 ---
