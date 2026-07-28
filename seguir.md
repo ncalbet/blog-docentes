@@ -32,7 +32,7 @@ permalink: /seguir/
           <input class="field" id="rss-url" type="text" value="https://mesadocente.com/feed.xml" readonly aria-readonly="true" style="font-family:var(--mono);font-size:.95rem">
           <button class="btn" type="button" id="rss-copy-btn">Copiar</button>
         </form>
-        <p class="newsletter__fine">¿No conoces el RSS? Es la manera de seguir un blog sin depender del correo ni de las redes: con una de esas apps —gratuitas— los artículos nuevos te llegan solos, sin que nadie decida por ti qué ves. También puedes <a href="{{ '/feed.xml' | relative_url }}">abrir el feed directamente</a>.</p>
+        <p class="newsletter__fine">¿No conoces el RSS? Es la manera de seguir un blog sin depender del correo ni de las redes: con una de esas apps —gratuitas— los artículos nuevos te llegan solos, sin que nadie decida por ti qué ves.</p>
       </div>
     </div>
   </section>
