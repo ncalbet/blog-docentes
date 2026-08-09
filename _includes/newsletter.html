@@ -1,6 +1,11 @@
 {%- comment -%}
   Bloque de suscripción reutilizable. Parámetros opcionales:
   title, text, id (id único del campo de correo por página).
+
+  El formulario envía a MailerLite (cuenta 2564050, formulario 195352555884119538)
+  conservando el diseño del sitio: no se carga ni el CSS ni el JS de MailerLite.
+  El envío lo intercepta el script del final para no salir de la página; si no hay
+  JavaScript, el formulario se envía de forma nativa y sigue funcionando.
 {%- endcomment -%}
 <div class="newsletter">
   <div class="newsletter__grid">
@@ -10,17 +15,50 @@
       <p>{{ include.text | default: "Un artículo cada dos semanas, directo a tu bandeja. Puedes darte de baja cuando quieras." }}</p>
     </div>
     <div>
-      <!-- ================================================================= -->
-      <!--  FORMULARIO EMBED DE BREVO                                        -->
-      <!--  Pega aquí el código <form> que genera Brevo y borra el           -->
-      <!--  formulario de marcador que hay justo debajo (es solo visual).    -->
-      <!-- ================================================================= -->
-      <form class="newsletter-form" action="#" method="post">
+      <form class="newsletter-form js-newsletter"
+            action="https://assets.mailerlite.com/jsonp/2564050/forms/195352555884119538/subscribe"
+            method="post" target="_blank">
         <label class="visually-hidden" for="{{ include.id | default: 'nl' }}">Correo electrónico</label>
-        <input class="field" id="{{ include.id | default: 'nl' }}" type="email" name="email" placeholder="tu@correo.com" autocomplete="email" required>
+        <input class="field" id="{{ include.id | default: 'nl' }}" type="email" name="fields[email]" placeholder="tu@correo.com" autocomplete="email" required>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
         <button class="btn" type="submit">Suscribirme</button>
       </form>
-      <p class="newsletter__fine">Solo los artículos. Tu correo se queda entre nosotros.</p>
+      <p class="newsletter__fine js-newsletter-fine">Solo los artículos. Tu correo se queda entre nosotros.</p>
+      <p class="newsletter__ok js-newsletter-ok" hidden role="status">
+        <strong>Hecho.</strong> Revisa tu correo y confirma la suscripción. El mensaje
+        de confirmación llega en inglés, cosa del sistema de envíos.
+      </p>
     </div>
   </div>
 </div>
+
+<script>
+(function () {
+  if (window.__mdNewsletterInit) return;   // el bloque puede repetirse en una página
+  window.__mdNewsletterInit = true;
+
+  document.addEventListener('submit', function (ev) {
+    var form = ev.target;
+    if (!form.classList || !form.classList.contains('js-newsletter')) return;
+    if (!window.fetch || !window.FormData) return;   // navegador antiguo: envío nativo
+
+    ev.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+
+    // Respuesta opaca (no-cors): MailerLite registra el alta, pero no podemos
+    // leer el resultado. Confirmamos por correo, que es lo que ve el usuario.
+    fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+      .catch(function () {})
+      .then(function () {
+        var caja = form.parentNode;
+        var ok = caja.querySelector('.js-newsletter-ok');
+        var fine = caja.querySelector('.js-newsletter-fine');
+        if (ok) ok.hidden = false;
+        if (fine) fine.hidden = true;
+        form.hidden = true;
+      });
+  });
+})();
+</script>
