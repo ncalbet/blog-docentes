@@ -2,10 +2,15 @@
   Bloque de suscripción reutilizable. Parámetros opcionales:
   title, text, id (id único del campo de correo por página).
 
-  El formulario envía a MailerLite (cuenta 2564050, formulario 195352555884119538)
-  conservando el diseño del sitio: no se carga ni el CSS ni el JS de MailerLite.
-  El envío lo intercepta el script del final para no salir de la página; si no hay
-  JavaScript, el formulario se envía de forma nativa y sigue funcionando.
+  El formulario envía a Buttondown (cuenta `mesadocente`) conservando el diseño
+  del sitio: no se carga ni el CSS ni el JS de Buttondown. El envío lo intercepta
+  el script del final para no salir de la página; si no hay JavaScript, el
+  formulario se envía de forma nativa y sigue funcionando.
+
+  Migrado de MailerLite el 2026-08-11: `mlsend.com` está en la lista de bloqueo
+  de Peter Lowe (activa por defecto en uBlock Origin) y reescribía TODOS los
+  enlaces, así que los lectores con bloqueador no podían pulsarlos. Buttondown
+  no reescribe: el seguimiento de clics viene desactivado de fábrica.
 {%- endcomment -%}
 <div class="newsletter">
   <div class="newsletter__grid">
@@ -16,12 +21,10 @@
     </div>
     <div>
       <form class="newsletter-form js-newsletter"
-            action="https://assets.mailerlite.com/jsonp/2564050/forms/195352555884119538/subscribe"
+            action="https://buttondown.com/api/emails/embed-subscribe/mesadocente"
             method="post" target="_blank">
         <label class="visually-hidden" for="{{ include.id | default: 'nl' }}">Correo electrónico</label>
-        <input class="field" id="{{ include.id | default: 'nl' }}" type="email" name="fields[email]" placeholder="tu@correo.com" autocomplete="email" required>
-        <input type="hidden" name="ml-submit" value="1">
-        <input type="hidden" name="anticsrf" value="true">
+        <input class="field" id="{{ include.id | default: 'nl' }}" type="email" name="email" placeholder="tu@correo.com" autocomplete="email" required>
         <button class="btn" type="submit">Suscribirme</button>
       </form>
       <p class="newsletter__fine js-newsletter-fine">Solo los artículos. Tu correo se queda entre nosotros.</p>
@@ -47,9 +50,16 @@
     var btn = form.querySelector('button[type="submit"]');
     if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
 
-    // Respuesta opaca (no-cors): MailerLite registra el alta, pero no podemos
+    // Respuesta opaca (no-cors): Buttondown registra el alta, pero no podemos
     // leer el resultado. Confirmamos por correo, que es lo que ve el usuario.
-    fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+    // URLSearchParams (no FormData) para enviar application/x-www-form-urlencoded:
+    // en no-cors no veríamos un rechazo por Content-Type, así que usamos el formato
+    // que acepta cualquier endpoint.
+    fetch(form.action, {
+      method: 'POST',
+      body: new URLSearchParams(new FormData(form)),
+      mode: 'no-cors'
+    })
       .catch(function () {})
       .then(function () {
         var caja = form.parentNode;
