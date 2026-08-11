@@ -39,8 +39,10 @@
       <div class="header-actions">
         <nav class="nav" aria-label="Principal">
           <a class="nav__link" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Inicio</a>
+          {%- comment -%} Leyendo un artículo, «Blog» queda marcado: es la sección a la que pertenece {%- endcomment -%}
+          <a class="nav__link" href="{{ '/blog/' | relative_url }}"{% if page.url contains 'blog' or page.layout == 'post' %} aria-current="page"{% endif %}>Blog</a>
           <a class="nav__link" href="{{ '/temas/' | relative_url }}"{% if page.url contains 'temas' %} aria-current="page"{% endif %}>Temas</a>
-          <a class="nav__link" href="{{ '/sobre/' | relative_url }}"{% if page.url contains 'sobre' %} aria-current="page"{% endif %}>Sobre este blog</a>
+          <a class="nav__link" href="{{ '/sobre/' | relative_url }}"{% if page.url contains 'sobre' %} aria-current="page"{% endif %}>Sobre</a>
           <a class="nav__link" href="{{ '/seguir/' | relative_url }}"{% if page.url contains 'seguir' %} aria-current="page"{% endif %}>Seguir</a>
         </nav>
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Activar el modo oscuro">
@@ -68,6 +70,7 @@
         <nav class="footer-nav" aria-label="Enlaces del pie">
           <span class="label">Navegar</span>
           <a href="{{ '/' | relative_url }}">Inicio</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog (todos los artículos)</a>
           <a href="{{ '/temas/' | relative_url }}">Temas</a>
           <a href="{{ '/sobre/' | relative_url }}">Sobre este blog</a>
           <a href="{{ '/seguir/' | relative_url }}">Seguir (correo y RSS)</a>

@@ -1,0 +1,21 @@
+{%- comment -%}
+  Una entrada de la lista de artículos. Parámetros:
+  post (obligatorio) · show_cat=false para ocultar el nombre del tema
+  (dentro de la página de un tema, repetirlo en cada línea sobra).
+{%- endcomment -%}
+{%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
+{%- assign mes = include.post.date | date: "%-m" | minus: 1 -%}
+{%- assign palabras = include.post.content | number_of_words -%}
+{%- assign lectura = palabras | divided_by: 200 | plus: 1 -%}
+<li class="post-item">
+  <a href="{{ include.post.url | relative_url }}">
+    <p class="post-item__meta">{{ include.post.date | date: "%-d" }} de {{ meses[mes] }} de {{ include.post.date | date: "%Y" }} &middot; {{ lectura }} min de lectura</p>
+    {%- unless include.show_cat == false -%}
+    {%- if include.post.category -%}{%- assign tema = site.data.temas | where: "slug", include.post.category | first -%}
+    <p class="post-item__cat">{{ tema.nombre | default: include.post.category }}</p>{%- endif -%}
+    {%- endunless -%}
+    <h3 class="post-item__title">{{ include.post.title }}</h3>
+    {% if include.post.description %}<p class="post-item__dek">{{ include.post.description }}</p>{% endif %}
+    <span class="post-item__more">Leer el artículo <span aria-hidden="true">&rarr;</span></span>
+  </a>
+</li>

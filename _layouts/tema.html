@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{%- comment -%}
+  Página de un tema. El front matter de la página solo aporta `tema: <slug>`;
+  el nombre y el lema salen de _data/temas.yml, que sigue siendo la fuente única.
+{%- endcomment -%}
+{%- assign tema = site.data.temas | where: "slug", page.tema | first -%}
+{%- assign posts_tema = site.categories[page.tema] -%}
+<div class="fade-in">
+  <section class="hero">
+    <div class="container"><div class="reading">
+      <a class="back-link" href="{{ '/temas/' | relative_url }}"><span aria-hidden="true">&larr;</span> Todos los temas</a>
+      <p class="eyebrow eyebrow--accent">Tema</p>
+      <h1 class="hero__title">{{ tema.nombre | default: page.title }}</h1>
+      <p class="hero__lead">{{ tema.lema | default: page.description }}</p>
+    </div></div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      {% if posts_tema and posts_tema.size > 0 %}
+      <div class="section-head"><h2>{{ posts_tema.size }} artículo{% if posts_tema.size != 1 %}s{% endif %}</h2></div>
+      <ul class="post-list">
+        {% for post in posts_tema %}{% include post-item.html post=post show_cat=false %}{% endfor %}
+      </ul>
+      {% else %}
+      <div class="empty-state">
+        {% include mesa-mark.html size="40" simple="true" %}
+        <h2>Este hilo todavía no tiene artículos.</h2>
+        <p>Está en la mesa de trabajo. Déjame tu correo y te aviso cuando publique el primero, o pásate por los otros temas.</p>
+        <a class="btn" href="{{ '/blog/' | relative_url }}">Ver todos los artículos</a>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head"><h2>Otros temas</h2></div>
+      {% include temas-chips.html except=page.tema %}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {% include newsletter.html id="nl-tema" title="Sigue este hilo" text="Cada dos semanas publico un artículo nuevo. Te aviso por correo el día que sale." %}
+    </div>
+  </section>
+</div>

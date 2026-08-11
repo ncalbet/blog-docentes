@@ -115,9 +115,6 @@ strong { font-weight:700; }
 
 /* ---------- 4. Marca (motivo «mesa») ------------------------- */
 .mesa-mark { display:block; color:var(--brand); }
-.rule-mesa { display:flex; align-items:center; gap:16px; color:var(--rule-strong); }
-.rule-mesa::before, .rule-mesa::after { content:""; flex:1; height:1px; background:currentColor; }
-.rule-mesa svg { color:var(--accent); }
 
 /* ---------- 5. Cabecera / navegación ------------------------- */
 .site-header { border-bottom:1px solid var(--rule); background:var(--paper); }
@@ -151,6 +148,8 @@ strong { font-weight:700; }
 
 /* ---------- 6. Bloques de sección ---------------------------- */
 .section { padding-block:clamp(48px, 8vw, 88px); }
+/* Entre bloques que van juntos (destacado → lista → temas), menos aire */
+.section--tight { padding-block:clamp(26px, 4vw, 44px); }
 .hero { padding-block:clamp(44px, 7vw, 84px) clamp(28px, 4vw, 44px); }
 .hero__title {
   font-family:var(--serif); font-weight:600; font-size:var(--fs-h1-home);
@@ -173,6 +172,23 @@ strong { font-weight:700; }
 .post-item a:hover .post-item__title { color:var(--link-hover); }
 .post-item__dek { margin-top:12px; color:var(--ink-soft); max-width:62ch; line-height:1.6; }
 .post-item__more { display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-family:var(--sans); font-size:.9rem; font-weight:600; color:var(--link); }
+
+/* Variante breve: en la portada, bajo el destacado, basta fecha y titular */
+.post-list--compact .post-item { padding-block:clamp(15px, 2vw, 20px); }
+.post-list--compact .post-item__meta { margin-bottom:6px; }
+.post-list--compact .post-item__title { font-size:var(--fs-h3); }
+
+/* Artículo destacado de la portada: filete terracota arriba para distinguirlo
+   de la caja de suscripción, que comparte fondo y borde. */
+.featured { background:var(--surface); border:1px solid var(--rule-strong); border-top:3px solid var(--accent); border-radius:var(--radius); padding:clamp(24px, 4vw, 40px); max-width:760px; }
+.featured a { display:block; text-decoration:none; color:inherit; }
+.featured__title { font-family:var(--serif); font-weight:600; font-size:clamp(1.55rem, 1.25rem + 1.5vw, 2.2rem); line-height:1.16; letter-spacing:-.012em; color:var(--ink); text-wrap:balance; }
+.featured__dek { margin-top:14px; color:var(--ink-soft); max-width:60ch; line-height:1.6; }
+.featured a:hover .featured__title { color:var(--link-hover); }
+
+.more-link { display:inline-flex; align-items:center; gap:8px; margin-top:22px; font-family:var(--sans); font-size:.95rem; font-weight:600; color:var(--link); text-decoration:none; }
+.more-link:hover { color:var(--link-hover); text-decoration:underline; }
+.archive-count { font-family:var(--sans); font-size:.9rem; color:var(--muted); margin-bottom:14px; }
 
 /* Estado vacío / recién lanzado */
 .empty-state {
@@ -216,34 +232,19 @@ figcaption { font-family:var(--sans); font-size:.82rem; color:var(--muted); line
   background:var(--paper); padding:7px 11px; border-radius:2px; border:1px solid var(--rule);
 }
 
-/* Tablas con scroll dentro de su contenedor */
-.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--rule); border-radius:var(--radius); }
-.table-scroll table { border-collapse:collapse; width:100%; min-width:440px; font-family:var(--sans); font-size:.9rem; }
-.table-scroll th { text-align:left; padding:12px 16px; background:var(--surface); border-bottom:1px solid var(--rule-strong); font-weight:700; color:var(--ink); }
-.table-scroll td { padding:11px 16px; border-bottom:1px solid var(--rule); color:var(--ink-soft); }
-.table-scroll tr:last-child td { border-bottom:0; }
+/* Tablas. Kramdown emite un <table> pelado, sin envoltorio al que agarrarse:
+   display:block hace que sea la propia tabla la que desplaza en horizontal,
+   así una tabla ancha nunca empuja la página en móvil. */
+.prose table {
+  display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; max-width:100%;
+  border-collapse:collapse; font-family:var(--sans); font-size:.9rem;
+  border:1px solid var(--rule); border-radius:var(--radius);
+}
+.prose th { text-align:left; padding:12px 16px; background:var(--surface); border-bottom:1px solid var(--rule-strong); font-weight:700; color:var(--ink); white-space:nowrap; }
+.prose td { padding:11px 16px; border-bottom:1px solid var(--rule); color:var(--ink-soft); }
+.prose tr:last-child td { border-bottom:0; }
 
-/* ---------- 10. Aparato académico: citas y referencias ------- */
-.cite {
-  font-family:var(--sans); text-decoration:none; color:var(--accent-strong); font-weight:600;
-  font-size:.7em; vertical-align:super; line-height:0; padding:0 1px;
-}
-.cite:hover { text-decoration:underline; color:var(--accent-strong); }
-.references h2 {
-  font-family:var(--sans); font-size:.82rem; font-weight:700; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--muted); margin-bottom:18px;
-}
-.references ol {
-  font-family:var(--sans); font-size:.9rem; line-height:1.55; color:var(--ink-soft);
-  display:flex; flex-direction:column; gap:14px; padding-left:1.5em; margin:0;
-}
-.references li { padding-left:4px; }
-.references em { font-style:italic; }
-.references a[href^="https://doi.org"] { word-break:break-word; }
-.references .backref { text-decoration:none; color:var(--muted); }
-.references .backref:hover { color:var(--ink); }
-
-/* Firma del autor (byline) */
+/* ---------- 10. Firma del autor (byline) --------------------- */
 .byline { display:flex; gap:18px; align-items:flex-start; margin-top:1.4em; padding-top:1.6em; border-top:1px solid var(--rule); }
 .byline .mesa-mark { flex-shrink:0; }
 .byline p { font-family:var(--sans); font-size:.92rem; line-height:1.6; color:var(--ink-soft); margin:0; }
@@ -285,15 +286,29 @@ figcaption { font-family:var(--sans); font-size:.82rem; color:var(--muted); line
 .post-item__cat { font-family:var(--sans); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-strong); margin-bottom:8px; }
 .eyebrow-link { color:inherit; text-decoration:none; }
 .eyebrow-link:hover { text-decoration:underline; }
-.tema { padding-block:clamp(26px, 4vw, 40px); border-bottom:1px solid var(--rule); max-width:760px; }
-.tema:first-child { padding-top:0; }
-.tema:last-child { border-bottom:0; }
-.tema .eyebrow { margin-bottom:8px; }
-.tema__lema { color:var(--ink-soft); max-width:60ch; line-height:1.6; }
-.tema__list { list-style:none; padding:0; margin:16px 0 0; display:flex; flex-direction:column; gap:12px; }
-.tema__list a { font-family:var(--serif); font-weight:600; font-size:var(--fs-h3); line-height:1.25; color:var(--ink); text-decoration:none; }
-.tema__list a:hover { color:var(--link-hover); }
-.tema__empty { font-family:var(--sans); font-size:.9rem; color:var(--muted); margin-top:12px; }
+/* Fila de temas (portada, archivo, pie de la página de un tema) */
+.chips { list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:10px; }
+.chip {
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--sans); font-size:.92rem; font-weight:600; color:var(--ink-soft); text-decoration:none;
+  background:var(--surface); border:1px solid var(--rule-strong); border-radius:2px; padding:9px 14px;
+  transition:border-color .18s ease, color .18s ease;
+}
+.chip:hover { border-color:var(--accent); color:var(--ink); }
+.chip__n { font-size:.78rem; font-weight:700; color:var(--muted); }
+
+/* Rejilla de los cinco hilos en /temas/ */
+.tema-cards { display:grid; gap:16px; grid-template-columns:repeat(auto-fit, minmax(min(270px, 100%), 1fr)); max-width:900px; }
+.tema-card {
+  display:flex; flex-direction:column; gap:10px; height:100%; text-decoration:none;
+  background:var(--surface); border:1px solid var(--rule-strong); border-radius:var(--radius);
+  padding:clamp(20px, 3vw, 28px); transition:border-color .18s ease;
+}
+.tema-card:hover { border-color:var(--accent); }
+.tema-card__name { font-family:var(--serif); font-weight:600; font-size:var(--fs-h3); line-height:1.2; color:var(--ink); }
+.tema-card:hover .tema-card__name { color:var(--link-hover); }
+.tema-card__lema { font-family:var(--sans); font-size:.92rem; line-height:1.55; color:var(--ink-soft); }
+.tema-card__meta { margin-top:auto; padding-top:6px; font-family:var(--sans); font-size:.85rem; font-weight:600; color:var(--accent-strong); }
 
 /* ---------- 13. Pie --------------------------------------- */
 .site-footer { background:var(--footer-bg); color:var(--footer-fg); margin-top:auto; }
