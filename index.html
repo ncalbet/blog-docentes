@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
 <div class="fade-in">
   <section class="hero">
     <div class="container">
@@ -10,37 +11,73 @@ layout: default
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head"><h2>Artículos</h2></div>
+  {% if site.posts.size > 0 %}
+  {%- assign destacado = site.posts.first -%}
 
-      {%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
-      {% if site.posts.size > 0 %}
-      <ul class="post-list">
-        {% for post in site.posts %}
+  <!-- Lo último: el artículo más reciente, en grande -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head"><h2>Lo último</h2></div>
+      {%- assign mes = destacado.date | date: "%-m" | minus: 1 -%}
+      {%- assign palabras = destacado.content | number_of_words -%}
+      {%- assign lectura = palabras | divided_by: 200 | plus: 1 -%}
+      <article class="featured">
+        <a href="{{ destacado.url | relative_url }}">
+          <p class="post-item__meta">{{ destacado.date | date: "%-d" }} de {{ meses[mes] }} de {{ destacado.date | date: "%Y" }} &middot; {{ lectura }} min de lectura</p>
+          {%- if destacado.category -%}{%- assign tema = site.data.temas | where: "slug", destacado.category | first -%}
+          <p class="post-item__cat">{{ tema.nombre | default: destacado.category }}</p>{%- endif -%}
+          <h2 class="featured__title">{{ destacado.title }}</h2>
+          {% if destacado.description %}<p class="featured__dek">{{ destacado.description }}</p>{% endif %}
+          <span class="post-item__more">Leer el artículo <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Los siguientes, en lista breve. El archivo completo vive en /blog/ -->
+  {%- assign recientes = site.posts | offset: 1 | limit: 3 -%}
+  {% if recientes.size > 0 %}
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head"><h2>Más artículos</h2></div>
+      <ul class="post-list post-list--compact">
+        {% for post in recientes %}
         {%- assign mes = post.date | date: "%-m" | minus: 1 -%}
-        {%- assign palabras = post.content | number_of_words -%}
-        {%- assign lectura = palabras | divided_by: 200 | plus: 1 -%}
         <li class="post-item">
           <a href="{{ post.url | relative_url }}">
-            <p class="post-item__meta">{{ post.date | date: "%-d" }} de {{ meses[mes] }} de {{ post.date | date: "%Y" }} &middot; {{ lectura }} min de lectura</p>
-            {%- if post.category -%}{%- assign tema = site.data.temas | where: "slug", post.category | first -%}
-            <p class="post-item__cat">{{ tema.nombre | default: post.category }}</p>{%- endif -%}
+            <p class="post-item__meta">
+              {{ post.date | date: "%-d" }} de {{ meses[mes] }} de {{ post.date | date: "%Y" }}
+              {%- if post.category -%}{%- assign tema = site.data.temas | where: "slug", post.category | first -%}
+              &middot; {{ tema.nombre | default: post.category }}{%- endif -%}
+            </p>
             <h3 class="post-item__title">{{ post.title }}</h3>
-            {% if post.description %}<p class="post-item__dek">{{ post.description }}</p>{% endif %}
-            <span class="post-item__more">Leer el artículo <span aria-hidden="true">&rarr;</span></span>
           </a>
         </li>
         {% endfor %}
       </ul>
-      {% else %}
-      <!-- Estado «recién lanzado / sin artículos todavía» -->
+      <a class="more-link" href="{{ '/blog/' | relative_url }}">Todos los artículos <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </section>
+  {% endif %}
+
+  {% else %}
+  <!-- Estado «recién lanzado / sin artículos todavía» -->
+  <section class="section">
+    <div class="container">
       <div class="empty-state">
         {% include mesa-mark.html size="40" simple="true" %}
         <h2>La mesa está puesta; el primer artículo llega pronto.</h2>
         <p>Publicamos un texto de fondo cada dos semanas. Deja tu correo y te aviso en cuanto esté el primero.</p>
       </div>
-      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Puerta de entrada a los cinco hilos -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head"><h2>Explora por temas</h2></div>
+      {% include temas-chips.html %}
     </div>
   </section>
 

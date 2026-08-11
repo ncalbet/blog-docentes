@@ -1,0 +1,18 @@
+{%- comment -%}
+  Fila de enlaces a los cinco temas. Parámetro opcional:
+  `except` = slug que NO se muestra (útil en la página de un tema, para «otros temas»).
+{%- endcomment -%}
+<ul class="chips">
+  {%- for tema in site.data.temas -%}
+  {%- unless include.except and include.except == tema.slug -%}
+  {%- assign n = 0 -%}
+  {%- assign posts_tema = site.categories[tema.slug] -%}
+  {%- if posts_tema -%}{%- assign n = posts_tema.size -%}{%- endif -%}
+  <li>
+    <a class="chip" href="{{ '/temas/' | append: tema.slug | append: '/' | relative_url }}">
+      {{ tema.nombre }}{% if n > 0 %} <span class="chip__n">{{ n }}</span>{% endif %}
+    </a>
+  </li>
+  {%- endunless -%}
+  {%- endfor -%}
+</ul>
