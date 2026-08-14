@@ -51,10 +51,10 @@ Diseñar materiales que consideren la diversidad socioeconómica, cultural y fun
 
 ## Referencias
 
-[1] Decoding divides: The role of socioeconomic status and personality traits in AI divides and educational inequality. [doi.org/10.1016/j.caeai.2026.100566](https://doi.org/10.1016/j.caeai.2026.100566)
+[1] Wang et al. (2026). *Decoding divides: The role of socioeconomic status and personality traits in AI divides and educational inequality*. [Ver estudio →](https://doi.org/10.1016/j.caeai.2026.100566)
 
-[2] Promoting inclusive AI and technology in K-12 education: A review of context, instructional strategies, and learning outcomes. [doi.org/10.1016/j.caeai.2025.100478](https://doi.org/10.1016/j.caeai.2025.100478)
+[2] Lee et al. (2025). *Promoting inclusive AI and technology in K-12 education: A review of context, instructional strategies, and learning outcomes*. [Ver estudio →](https://doi.org/10.1016/j.caeai.2025.100478)
 
-[3] Equity in Secondary Career and Technical Education in the United States: A Theoretical Framework and Systematic Literature Review. [doi.org/10.3102/0034654321995243](https://doi.org/10.3102/0034654321995243)
+[3] Kim et al. (2021). *Equity in Secondary Career and Technical Education in the United States: A Theoretical Framework and Systematic Literature Review*. [Ver estudio →](https://doi.org/10.3102/0034654321995243)
 
-[4] From ethical principles to executable governance: A policy-as-code framework for trustworthy AI in higher education. [doi.org/10.1016/j.caeai.2026.100594](https://doi.org/10.1016/j.caeai.2026.100594)
+[4] Evangelista y Salman Bukhari (2026). *From ethical principles to executable governance: A policy-as-code framework for trustworthy AI in higher education*. [Ver estudio →](https://doi.org/10.1016/j.caeai.2026.100594)
