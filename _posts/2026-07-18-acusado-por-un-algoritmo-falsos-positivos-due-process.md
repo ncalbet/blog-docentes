@@ -41,9 +41,9 @@ La pregunta que las instituciones académicas deben hacerse va más allá de "¿
 
 ## Referencias
 
-[1] Trajectories of AI policy in higher education: Interpretations, discourses, and enactments of students and teachers. [doi.org/10.1016/j.caeai.2025.100496](https://doi.org/10.1016/j.caeai.2025.100496)
+[1] Tsao (2025). *Trajectories of AI policy in higher education: Interpretations, discourses, and enactments of students and teachers*. [Ver estudio →](https://doi.org/10.1016/j.caeai.2025.100496)
 
-[2] AI-assisted Assessment in Higher Education: A Systematic Review. [doi.org/10.61414/jeti.v6i4.209](https://doi.org/10.61414/jeti.v6i4.209)
+[2] Zhao (2025). *AI-assisted Assessment in Higher Education: A Systematic Review*. [Ver estudio →](https://doi.org/10.61414/jeti.v6i4.209)
 
 ## Para seguir leyendo
 

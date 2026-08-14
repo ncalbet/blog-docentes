@@ -53,13 +53,13 @@ Esa es la pregunta que el entusiasmo por ChatGPT tiende a aplazar. Convendría q
 
 ## Referencias
 
-[1] Scaffolding critical thinking with generative AI: Design principles for integrating large language models in higher education. [doi.org/10.1016/j.caeai.2026.100572](https://doi.org/10.1016/j.caeai.2026.100572)
+[1] Vendrell y Johnston (2026). *Scaffolding critical thinking with generative AI: Design principles for integrating large language models in higher education*. [Ver estudio →](https://doi.org/10.1016/j.caeai.2026.100572)
 
-[2] The cognitive impact of ChatGPT in higher education: A systematic review of critical and creative thinking outcomes. [doi.org/10.1016/j.caeai.2026.100571](https://doi.org/10.1016/j.caeai.2026.100571)
+[2] Li et al. (2026). *The cognitive impact of ChatGPT in higher education: A systematic review of critical and creative thinking outcomes*. [Ver estudio →](https://doi.org/10.1016/j.caeai.2026.100571)
 
-[3] Generative AI in the Classroom: Effects of Context-Personalized Learning Material and Tasks on Motivation and Performance. [doi.org/10.1007/s40593-025-00491-9](https://doi.org/10.1007/s40593-025-00491-9)
+[3] Tasdelen y Bodemer (2025). *Generative AI in the Classroom: Effects of Context-Personalized Learning Material and Tasks on Motivation and Performance*. [Ver estudio →](https://doi.org/10.1007/s40593-025-00491-9)
 
-[5] Student Teachers' Agency in an AI-Supported Learning Environment: A Q Methodology Study. [doi.org/10.1007/s40593-025-00529-y](https://doi.org/10.1007/s40593-025-00529-y)
+[5] Chaaban et al. (2025). *Student Teachers' Agency in an AI-Supported Learning Environment: A Q Methodology Study*. [Ver estudio →](https://doi.org/10.1007/s40593-025-00529-y)
 
 ## Para seguir leyendo
 
