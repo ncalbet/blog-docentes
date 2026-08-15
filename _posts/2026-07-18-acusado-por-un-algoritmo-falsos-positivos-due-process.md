@@ -2,7 +2,7 @@
 layout: post
 category: garantias
 title: "Acusado por un algoritmo: falsos positivos, due process y el precio invisible de equivocarse"
-description: "Un estudiante de Historia del Arte llamado Nicole confía en que Turnitin es suficiente para detectar el uso de IA con precisión, y concluye que la…"
+description: "Una estudiante confía en que el detector de IA acierta, y el docente también. Qué garantías necesita el alumnado cuando una sospecha automática le cuesta cara."
 ---
 
 Un estudiante de Historia del Arte llamado Nicole confía en que Turnitin es suficiente para detectar el uso de IA con precisión, y concluye que la herramienta "ya basta para comprobar cómo los estudiantes usan la IA y asegurarse de que no todo su trabajo está creado por IA" [1]. La confianza de Nicole en el detector es una percepción construida sobre la opacidad del sistema, sin ninguna base técnica que la respalde. Y ahí reside el problema. Cuando una estudiante cree ciegamente en la infalibilidad de un algoritmo, y cuando los docentes hacen lo mismo para tomar decisiones sancionadoras, la integridad académica deja de ser un valor y se convierte en una ruleta.

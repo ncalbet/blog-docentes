@@ -2,7 +2,7 @@
 layout: post
 category: autonomia-cognitiva
 title: "Cuando el algoritmo decide qué cuenta como aprender"
-description: "Un sistema de aprendizaje adaptativo analiza el tiempo que un estudiante tarda en responder, sus clics, sus errores, su progreso por módulos, y con…"
+description: "Las plataformas adaptativas miden clics, tiempos y aciertos. La duda en voz alta o la pregunta reformulada quedan fuera del modelo, y también son aprendizaje."
 ---
 
 Un sistema de aprendizaje adaptativo analiza el tiempo que un estudiante tarda en responder, sus clics, sus errores, su progreso por módulos, y con esos datos construye una "ruta personalizada". Así lo describe, sin rodeos, la arquitectura técnica de uno de los sistemas más citados en la literatura reciente: procesa datos de plataformas como Codecademy, Duolingo o Khan Academy —tiempo de respuesta, tasa de finalización, puntuaciones por habilidad— para alimentar redes neuronales que recomiendan el siguiente paso de aprendizaje [1]. El sistema funciona. Pero la pregunta que raramente aparece en los artículos técnicos es otra: ¿quién decidió que esos datos son el aprendizaje?
