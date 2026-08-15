@@ -2,7 +2,7 @@
 layout: post
 category: equidad
 title: "Cuando la escuela se vuelve algorítmica, no todos entran por la misma puerta"
-description: "Un sistema de IA aplicado a la educación superior detectó sesgos sistemáticos en prácticamente todas sus configuraciones, y los atributos que más…"
+description: "Un sistema de IA en educación superior mostró sesgos en casi todas sus configuraciones, sobre todo por nivel socioeconómico. ¿Para quién funciona, exactamente?"
 ---
 
 Un sistema de IA aplicado a la educación superior detectó sesgos sistemáticos en prácticamente todas sus configuraciones, y los atributos que más frecuentemente provocaban decisiones discriminatorias eran el nivel socioeconómico y el nivel educativo de las familias. Esto no ocurrió en un entorno descuidado ni con herramientas obsoletas: ocurrió incluso después de aplicar técnicas de mitigación de sesgos, incluso bajo los umbrales de política más permisivos [4]. Si eso pasa en contextos con recursos y con equipos técnicos dedicados a corregirlo, conviene que nos hagamos una pregunta seria antes de seguir colocando IA en las aulas: ¿para quién funciona esto, exactamente?

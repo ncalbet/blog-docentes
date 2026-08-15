@@ -2,7 +2,7 @@
 layout: post
 category: autonomia-cognitiva
 title: "Cuando ChatGPT responde antes de que el estudiante pueda preguntarse"
-description: "Hay un momento pedagógico que los docentes conocen bien: el instante de duda en que un estudiante no sabe cómo continuar. Durante décadas, ese momento…"
+description: "El instante de duda en que un estudiante no sabe cómo seguir era un umbral productivo. Hoy se salda en segundos con una consulta, y algo se pierde ahí."
 ---
 
 Hay un momento pedagógico que los docentes conocen bien: el instante de duda en que un estudiante no sabe cómo continuar. Durante décadas, ese momento fue considerado productivo. Era el umbral desde el que se aprende a buscar, a equivocarse, a reconstruir. Hoy, ese umbral se salda en segundos con una consulta a ChatGPT. Y el problema va más allá de la rapidez: es lo que se pierde en el camino.
