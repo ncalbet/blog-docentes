@@ -5,8 +5,24 @@ lang: es
 url: "https://mesadocente.com"
 baseurl: ""
 
+# Autoria: PERSONA, no marca. Mesa Docente és la publicació; qui signa és una persona
+# amb ORCID. Amb `name` de marca, el JSON-LD declarava `Person: "Mesa Docente"` —una marca
+# disfressada de persona— i les credencials quedaven invisibles per a Google (E-E-A-T).
+# El nom de firma és "Néstor Calbet" (sense el segon cognom); a l'ORCID hi consta el nom
+# complet, i és el JSON-LD de /sobre/ qui els lliga amb `alternateName`. No treguis d'allà
+# la forma completa: és la que fa que la persona d'aquí i la de l'ORCID siguin la mateixa.
 author:
-  name: "Mesa Docente"   # marca; canvia-ho pel teu nom personal si vols signar els articles amb ell
+  name: "Néstor Calbet"
+  # Pàgina d'autor. `jekyll-seo-tag` la publica com a `author.url` dins del JSON-LD de
+  # CADA article (verificat a `json_ld_drop.rb`: agafa qualsevol clau d'aquest bloc).
+  # És el pont: l'article apunta a /sobre/, i /sobre/ declara el `sameAs` cap a l'ORCID.
+  url: "https://mesadocente.com/sobre/"
+  # Credencials del peu de cada article. Han de dir el MATEIX que l'ORCID; si canvien allà,
+  # canvien aquí.
+  bio: "Doctor en Derechos Humanos, profesor de secundaria en activo y colaborador docente en la Universitat Oberta de Catalunya."
+  # Identificador de persona (orcid.org/0009-0000-7900-1169). Si es buida aquesta línia,
+  # el byline i el JSON-LD deixen de mostrar-lo sols, sense tocar cap plantilla.
+  orcid: "0009-0000-7900-1169"
 
 markdown: kramdown
 permalink: /:year/:month/:title/

@@ -249,6 +249,15 @@ figcaption { font-family:var(--sans); font-size:.82rem; color:var(--muted); line
 .byline .mesa-mark { flex-shrink:0; }
 .byline p { font-family:var(--sans); font-size:.92rem; line-height:1.6; color:var(--ink-soft); margin:0; }
 .byline strong { color:var(--ink); }
+.byline__text { display:flex; flex-direction:column; align-items:flex-start; gap:10px; min-width:0; }
+
+/* iD ORCID. `break-all` en el tramo del identificador: es una URL sin espacios de 30
+   caracteres y en móvil, dentro de la firma, desbordaría el ancho del texto. */
+.orcid-id { display:inline-flex; align-items:center; gap:7px; font-family:var(--sans); font-size:.82rem; color:var(--muted); text-decoration:none; }
+.orcid-id span { word-break:break-all; }
+.orcid-id:hover { color:var(--ink); text-decoration:underline; }
+.orcid-id__mark { flex-shrink:0; }
+.about-idline { font-family:var(--sans); font-size:.9rem; color:var(--ink-soft); display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
 
 /* ---------- 11. Bloque de suscripción ------------------------ */
 .newsletter { background:var(--surface); border:1px solid var(--rule-strong); border-radius:var(--radius); padding:clamp(28px, 5vw, 56px); }
