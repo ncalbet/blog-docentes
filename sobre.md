@@ -15,7 +15,13 @@ permalink: /sobre/
 
   <section class="container"><div class="reading">
     <div class="about-lead">
-      <div class="about-portrait" role="img" aria-label="Marcador de imagen: retrato del autor"><span>retrato<br>del autor</span></div>
+      {%- comment -%}
+        `width` y `height` van escritos en el HTML a propósito: el navegador reserva el
+        hueco antes de descargar la imagen y la página no da el salto al cargarla.
+        El archivo es de 264 px y se muestra a 132: el doble, para pantallas retina.
+      {%- endcomment -%}
+      <img class="about-portrait" src="{{ '/assets/img/nestor-calbet.jpg' | relative_url }}"
+           width="132" height="132" alt="Néstor Calbet" loading="eager" decoding="async">
       <div class="about-bio">
         <p>Lo escribe <strong>Néstor Calbet</strong>, doctor en Derechos Humanos, profesor de secundaria en activo y colaborador docente en la Universitat Oberta de Catalunya. Antes de dar clase en secundaria pasó una década en derechos humanos y cooperación internacional —la misión de la OSCE en Kosovo, el Institut de Drets Humans de Catalunya, Lafede.cat, Ingeniería Sin Fronteras—, casi siempre diseñando y evaluando formación. La idea de «mesa» viene de ahí: una mesa redonda donde el profesorado se sienta como iguales a deliberar, sin cabecera. Aquí hay un colega que estudia con cuidado y comparte lo que encuentra, con la misma vocación honesta de quien prepara la clase para el próximo lunes.</p>
         <p>Sobre la IA circulan dos relatos: el que promete que salvará la escuela y el que augura que la arruinará. Este blog trabaja en un tercer terreno, el más útil para quien da clase: aprovechar lo que la IA ofrece de verdad y, a la vez, poner condiciones para que respete la privacidad, las garantías del alumnado y el criterio profesional de la docencia. La crítica está aquí al servicio de una propuesta: cada artículo termina señalando una vía, una práctica o un principio de diseño para hacerlo mejor.</p>
@@ -98,6 +104,7 @@ permalink: /sobre/
       "name": {{ site.author.name | jsonify }},
       "alternateName": ["Néstor Calbet Domingo", "Nestor Calbet Domingo", "Nestor Calbet"],
       "url": "{{ page.url | absolute_url }}",
+      "image": "{{ '/assets/img/nestor-calbet.jpg' | absolute_url }}",
       "description": {{ site.author.bio | jsonify }},
       "jobTitle": ["Profesor de secundaria", "Profesor colaborador"],
       "affiliation": [
