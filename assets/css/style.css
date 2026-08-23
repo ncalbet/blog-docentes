@@ -280,12 +280,14 @@ figcaption { font-family:var(--sans); font-size:.82rem; color:var(--muted); line
 
 /* ---------- 12. Página «Sobre» ------------------------------- */
 .about-lead { display:flex; gap:clamp(20px, 3vw, 32px); flex-wrap:wrap; align-items:flex-start; margin-bottom:clamp(28px, 4vw, 40px); }
+/* Cuadrado, no 132x160 como el marcador que había aquí: el original es casi cuadrado y
+   recortarlo en vertical costaba nitidez y hombros. `object-fit` protege el encuadre si
+   algún día se cambia la foto por otra que no sea cuadrada. */
 .about-portrait {
-  width:132px; height:160px; flex-shrink:0; border:1px solid var(--rule-strong); border-radius:var(--radius);
-  background:repeating-linear-gradient(135deg, var(--rule) 0 10px, var(--surface) 10px 20px);
-  display:flex; align-items:center; justify-content:center; text-align:center;
+  width:132px; height:132px; flex-shrink:0; display:block; object-fit:cover;
+  border:1px solid var(--rule-strong); border-radius:var(--radius);
+  background:var(--surface);
 }
-.about-portrait span { font-family:var(--mono); font-size:.72rem; color:var(--muted); background:var(--paper); padding:5px 8px; border-radius:2px; border:1px solid var(--rule); }
 .about-bio { flex:1; min-width:min(260px, 100%); display:flex; flex-direction:column; gap:1.1em; }
 .about-cols { display:grid; gap:clamp(20px, 3vw, 32px); grid-template-columns:repeat(auto-fit, minmax(min(220px, 100%), 1fr)); padding-block:clamp(22px, 3vw, 30px); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
 .about-cols h2 { font-family:var(--sans); font-size:.82rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-strong); margin-bottom:14px; }
