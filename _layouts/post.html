@@ -23,9 +23,17 @@ layout: default
     </div></div>
 
     <div class="container"><div class="reading">
+      {%- comment -%}
+        La firma va al layout, no a cada artículo: cambiarla aquí la cambia también en
+        todo lo ya publicado. El iD enlaza a ORCID y ORCID enlaza de vuelta a este sitio;
+        el vínculo cuenta cuando existe en las dos direcciones.
+      {%- endcomment -%}
       <div class="byline">
         {% include mesa-mark.html size="34" %}
-        <p><strong>Escrito por {{ site.author.name | default: "el autor" }}.</strong> {{ site.author.bio | default: "Profesor de secundaria en activo, doctor en Derechos Humanos y colaborador universitario. Escribe en Mesa Docente de colega a colega." }}</p>
+        <div class="byline__text">
+          <p><strong>Escrito por {{ site.author.name | default: "el autor" }}.</strong> {{ site.author.bio | default: "Profesor de secundaria en activo, doctor en Derechos Humanos y colaborador universitario. Escribe en Mesa Docente de colega a colega." }} <a href="{{ '/sobre/' | relative_url }}">Quién está detrás de Mesa Docente</a>.</p>
+          {% include orcid-id.html %}
+        </div>
       </div>
     </div></div>
 
