@@ -266,9 +266,6 @@ figcaption { font-family:var(--sans); font-size:.82rem; color:var(--muted); line
 .newsletter h2 { font-family:var(--serif); font-weight:600; font-size:clamp(1.6rem, 1.3rem + 1.4vw, 2.1rem); line-height:1.18; letter-spacing:-.01em; }
 .newsletter p { margin-top:14px; color:var(--ink-soft); max-width:46ch; line-height:1.6; }
 .newsletter__fine { margin-top:12px; font-family:var(--sans); font-size:.8rem; color:var(--muted); }
-.newsletter__ok { margin-top:14px; font-family:var(--sans); font-size:.95rem; line-height:1.5; color:var(--ink-soft); }
-.newsletter__ok strong { color:var(--accent-strong); }
-.newsletter [hidden] { display:none; }
 .newsletter-form { display:flex; flex-wrap:wrap; gap:10px; }
 
 .field { flex:1 1 200px; min-width:0; max-width:100%; font-family:var(--sans); font-size:1rem; padding:13px 14px; border:1px solid var(--rule-strong); border-radius:2px; background:var(--paper); color:var(--ink); }
