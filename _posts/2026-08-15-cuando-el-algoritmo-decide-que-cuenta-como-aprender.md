@@ -1,7 +1,7 @@
 ---
 layout: post
 category: autonomia-cognitiva
-title: "Cuando el algoritmo decide qué cuenta como aprender"
+title: "Cuando el algoritmo decide qué significa aprender"
 description: "Las plataformas adaptativas miden clics, tiempos y aciertos. La duda en voz alta o la pregunta reformulada quedan fuera del modelo, y también son aprendizaje."
 ---
 
