@@ -5,13 +5,23 @@ lang: es
 url: "https://mesadocente.com"
 baseurl: ""
 
-# Imatge de la targeta social (og:image / twitter:image). jekyll-seo-tag la fa absoluta
-# a partir de `url`. Sense això, compartir un article a WhatsApp o LinkedIn pintava una
-# targeta NUA, només text: LinkedIn no accepta el títol per paràmetre, el treu d'aquestes
-# meta. Hi va el retrat perquè és la imatge que ja tenim i perquè la marca és una persona.
-# PENDENT: una targeta 1200x630 pròpia — les xarxes esperen aquesta proporció i una imatge
-# quadrada l'escapcen pels costats.
-image: /assets/img/nestor-calbet.jpg
+# Imatge de la targeta social (og:image / twitter:image). Sense això, compartir un article
+# a WhatsApp o LinkedIn pinta una targeta NUA, només text: LinkedIn no accepta el títol per
+# paràmetre, el treu d'aquestes meta.
+#
+# Va per `defaults` i NO per una clau `image:` d'arrel. Provat el 2026-08-29: amb
+# `image:` al primer nivell, jekyll-seo-tag no emet cap `og:image` —llegeix la imatge de
+# la PÀGINA, no del lloc—, i el build no es queixa: la meta simplement no hi és. Amb
+# `defaults` cada pàgina neix amb `page.image` i sí que l'emet. Un `og:image` absent es
+# detecta mirant l'HTML servit, no els logs.
+#
+# PENDENT: una targeta 1200x630 pròpia. Ara hi ha el retrat, que és quadrat i les xarxes
+# l'escapcen pels costats; serveix, però no és el que toca.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/nestor-calbet.jpg
 
 # Autoria: PERSONA, no marca. Mesa Docente és la publicació; qui signa és una persona
 # amb ORCID. Amb `name` de marca, el JSON-LD declarava `Person: "Mesa Docente"` —una marca
