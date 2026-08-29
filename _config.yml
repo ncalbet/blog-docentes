@@ -77,3 +77,6 @@ feed:
 
 exclude:
   - README.md
+  # Font de la targeta social: es queda al repo per poder regenerar el PNG, però no es
+  # publica. Sense aquesta línia, Jekyll el serviria com una pàgina més del lloc.
+  - assets/img/mesa-docente-card.html
