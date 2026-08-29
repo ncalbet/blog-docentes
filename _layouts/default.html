@@ -26,6 +26,17 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_id }}"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site.ga4_id }}');</script>
   {%- endif %}
+
+  {%- comment -%}
+    Umami: bloc INDEPENDENT del de dalt, no una branca més de la cascada.
+    Why: la cascada és excloent i Cloudflare hi guanya sempre, així que com a `elsif`
+    no s'activaria mai. Els dos han de conviure durant el període de contrast, i tots
+    dos són sense galetes: conviure no obliga a cap banner.
+    Inert fins que es defineixi umami_website_id a _config.yml.
+  {%- endcomment -%}
+  {%- if site.umami_website_id %}
+  <script defer src="{{ site.umami_src | default: 'https://cloud.umami.is/script.js' }}" data-website-id="{{ site.umami_website_id }}"></script>
+  {%- endif %}
 </head>
 <body class="page">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
