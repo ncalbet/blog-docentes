@@ -14,7 +14,13 @@ layout: default
         {% if page.category %}{%- assign tema = site.data.temas | where: "slug", page.category | first -%}<p class="eyebrow eyebrow--accent"><a class="eyebrow-link" href="{{ '/temas/' | append: page.category | append: '/' | relative_url }}">{{ tema.nombre | default: page.category }}</a></p>{% endif %}
         <h1 class="article-title">{{ page.title }}</h1>
         {% if page.description %}<p class="article-dek">{{ page.description }}</p>{% endif %}
-        <p class="article-meta">Publicado el {{ page.date | date: "%-d" }} de {{ meses[mes] }} de {{ page.date | date: "%Y" }} &middot; {{ lectura }} min de lectura</p>
+        {%- comment -%}
+          La fecha de actualización se pinta AQUÍ, a la vista, y no solo en los metadatos:
+          es la señal que dice —al lector y a quien indexa— que el texto sigue mantenido.
+          Solo aparece si `publish.js --update` ha estampado `last_modified_at`.
+        {%- endcomment -%}
+        {%- assign mes_act = page.last_modified_at | date: "%-m" | minus: 1 -%}
+        <p class="article-meta">Publicado el {{ page.date | date: "%-d" }} de {{ meses[mes] }} de {{ page.date | date: "%Y" }} &middot; {{ lectura }} min de lectura{% if page.last_modified_at %} &middot; Actualizado el {{ page.last_modified_at | date: "%-d" }} de {{ meses[mes_act] }} de {{ page.last_modified_at | date: "%Y" }}{% endif %}</p>
       </div></div>
     </header>
 
@@ -23,6 +29,11 @@ layout: default
     </div></div>
 
     <div class="container"><div class="reading">
+      {%- comment -%} Inerte mientras el post no lleve `faq:` en su front matter {%- endcomment -%}
+      {% include faq.html %}
+
+      {% include compartir.html %}
+
       {%- comment -%}
         La firma va al layout, no a cada artículo: cambiarla aquí la cambia también en
         todo lo ya publicado. El iD enlaza a ORCID y ORCID enlaza de vuelta a este sitio;

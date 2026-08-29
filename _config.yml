@@ -5,6 +5,14 @@ lang: es
 url: "https://mesadocente.com"
 baseurl: ""
 
+# Imatge de la targeta social (og:image / twitter:image). jekyll-seo-tag la fa absoluta
+# a partir de `url`. Sense això, compartir un article a WhatsApp o LinkedIn pintava una
+# targeta NUA, només text: LinkedIn no accepta el títol per paràmetre, el treu d'aquestes
+# meta. Hi va el retrat perquè és la imatge que ja tenim i perquè la marca és una persona.
+# PENDENT: una targeta 1200x630 pròpia — les xarxes esperen aquesta proporció i una imatge
+# quadrada l'escapcen pels costats.
+image: /assets/img/nestor-calbet.jpg
+
 # Autoria: PERSONA, no marca. Mesa Docente és la publicació; qui signa és una persona
 # amb ORCID. Amb `name` de marca, el JSON-LD declarava `Person: "Mesa Docente"` —una marca
 # disfressada de persona— i les credencials quedaven invisibles per a Google (E-E-A-T).
@@ -41,6 +49,13 @@ google_site_verification: swNyEfqKqPBAqIyHvsdisd8X_7BZ8OlIki04tJaJrO4
 cf_analytics_token: "916a1eec55f8441c9126e7ffffb494fe"   # Cloudflare Web Analytics: gratis, sense cookies ni banner (ACTIU)
 # plausible_domain: mesadocente.com     # Plausible: sense cookies ni banner, de pagament
 # ga4_id: G-XXXXXXXXXX                  # Google Analytics 4: gratis, però a la UE demana avís de cookies
+
+# Umami Cloud — NO és part de la cascada de dalt: s'activa a banda i conviu amb Cloudflare.
+# Motiu de tenir-lo: Cloudflare Web Analytics no desglossa per campanya i el trànsit que ve
+# d'un correu arriba sense referer → "quant em porta la newsletter" no es pot respondre amb ell.
+# Umami llegeix els UTM. Enganxa aquí el Website ID d'umami.is i fes push.
+# umami_website_id: "________-____-____-____-____________"
+# umami_src: https://cloud.umami.is/script.js   # només si el compte és a la regió EU (canvia el host)
 
 # jekyll-feed genera /feed.xml automàticament (clau per a l'RSS del blog)
 feed:

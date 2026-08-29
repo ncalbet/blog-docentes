@@ -1,0 +1,52 @@
+{%- comment -%}
+  Preguntes freqüents del final de l'article. INERT mentre el post no porti `faq:`
+  al front matter — mateix criteri que els blocs d'analítica de default.html: la
+  peça hi és muntada, però no pinta res fins que algú la dota de contingut.
+
+  Forma al front matter del post:
+
+      faq:
+        - pregunta: "¿Puede un algoritmo decidir la nota de un alumno?"
+          respuesta: "…dues o tres frases que es puguin llegir soles…"
+
+  Per què existeix: un motor generatiu que ha de respondre una pregunta necessita
+  un tros de text que la respongui SENSE context al voltant. El cos de l'article
+  és assagístic a propòsit i no li serveix; això sí. Les respostes s'han de poder
+  entendre fora de la pàgina, sense pronoms que apuntin al paràgraf anterior.
+
+  El JSON-LD `FAQPage` conviu amb el `BlogPosting` que emet jekyll-seo-tag: són
+  dos blocs separats, que és el que Google espera, no un de fusionat.
+{%- endcomment -%}
+{%- comment -%} `size` sobre nil torna 0; `page.faq.size` hauria comparat nil amb 0 i Liquid hi peta {%- endcomment -%}
+{%- assign faq_n = page.faq | size -%}
+{%- if faq_n > 0 -%}
+<section class="faq" aria-labelledby="faq-titulo">
+  <h2 class="faq__titulo" id="faq-titulo">Preguntas frecuentes</h2>
+  <dl class="faq__lista">
+    {%- for item in page.faq %}
+    <div class="faq__item">
+      <dt>{{ item.pregunta }}</dt>
+      <dd>{{ item.respuesta }}</dd>
+    </div>
+    {%- endfor %}
+  </dl>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.pregunta | strip_html | normalize_whitespace | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.respuesta | strip_html | normalize_whitespace | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
+{%- endif -%}
