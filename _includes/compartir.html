@@ -1,0 +1,91 @@
+{%- comment -%}
+  Fila de compartir del peu de l'article. Viu al layout, no a cada post: així
+  apareix també a tot el que ja està publicat, i canviar-la aquí ho canvia tot.
+
+  SENSE WIDGETS DE TERCERS, i és a propòsit. Els botons oficials de LinkedIn o
+  WhatsApp carreguen JS extern i galetes de seguiment; això trencaria la promesa
+  del lloc (analítica sense galetes, cap banner, «sin algoritmos de por medio» a
+  /seguir/). Aquí només hi ha enllaços normals: funcionen sense JS i no informen
+  ningú de qui llegeix què.
+
+  Codificació: `url_encode` deixa els espais com a `+`, i dins d'un `mailto:` el
+  `+` arriba LITERAL al client de correu («Capacitar+o+descualificar»). Per això
+  tot passa per `url_encode | replace: '+', '%20'`; WhatsApp i LinkedIn accepten
+  `%20` igual de bé, així que la cadena és una de sola per als tres.
+
+  LinkedIn només accepta la URL: el títol i la imatge de la targeta els treu de
+  les meta `og:` de la pàgina. Si algun dia desapareix `image:` del _config.yml,
+  el que es comparteix aquí queda nu.
+{%- endcomment -%}
+{%- assign titulo = page.title | strip_html | strip -%}
+{%- assign enlace = page.url | absolute_url -%}
+{%- capture mensaje -%}{{ titulo }} — {{ enlace }}{%- endcapture -%}
+{%- assign titulo_url = titulo | url_encode | replace: '+', '%20' -%}
+{%- assign enlace_url = enlace | url_encode | replace: '+', '%20' -%}
+{%- assign mensaje_url = mensaje | url_encode | replace: '+', '%20' -%}
+<div class="compartir" data-compartir data-url="{{ enlace }}" data-titulo="{{ titulo | escape }}">
+  <p class="compartir__label">¿Le sirve a alguien de tu claustro?</p>
+  <div class="compartir__acciones">
+    <a class="compartir__btn" href="https://wa.me/?text={{ mensaje_url }}" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="compartir__btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ enlace_url }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="compartir__btn" href="mailto:?subject={{ titulo_url }}&amp;body={{ mensaje_url }}">Correo</a>
+    {%- comment -%}
+      Aquests dos només tenen sentit amb JS, així que neixen amagats i el CSS els
+      ensenya sota `.js` (mateix patró que `.theme-toggle`). Sense JS no queda cap
+      botó mort a la pàgina; els tres enllaços de dalt segueixen funcionant.
+    {%- endcomment -%}
+    <button class="compartir__btn compartir__btn--js" type="button" data-copiar>Copiar enlace</button>
+    <button class="compartir__btn compartir__btn--js compartir__btn--nativo" type="button" data-nativo>Compartir…</button>
+  </div>
+</div>
+<script>
+/* Millora progressiva del bloc de compartir. Inline i no a theme.js perquè
+   theme.js es carrega a TOTES les pàgines i això només existeix als articles. */
+(function () {
+  var caja = document.querySelector('[data-compartir]');
+  if (!caja) return;
+  var url = caja.getAttribute('data-url');
+  var titulo = caja.getAttribute('data-titulo');
+
+  var copiar = caja.querySelector('[data-copiar]');
+  if (copiar) {
+    var original = copiar.textContent;
+    var hecho = function () {
+      copiar.textContent = '¡Copiado!';
+      setTimeout(function () { copiar.textContent = original; }, 1800);
+    };
+    /* Reserva per a navegadors sense Clipboard API: un textarea fora de pantalla.
+       Aquí no hi ha cap camp visible d'on copiar, a diferència de /seguir/. */
+    var reserva = function () {
+      try {
+        var t = document.createElement('textarea');
+        t.value = url; t.setAttribute('readonly', '');
+        t.style.position = 'absolute'; t.style.left = '-9999px';
+        document.body.appendChild(t); t.select();
+        document.execCommand('copy');
+        document.body.removeChild(t);
+        hecho();
+      } catch (e) {}
+    };
+    copiar.addEventListener('click', function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(hecho).catch(reserva);
+      } else { reserva(); }
+    });
+  }
+
+  /* Menú natiu del sistema: al mòbil és el camí bo (hi surten totes les apps que
+     el lector té instal·lades). Al navegador d'escriptori no existeix: el botó
+     es queda amagat i manen els enllaços de dalt. */
+  var nativo = caja.querySelector('[data-nativo]');
+  if (nativo) {
+    if (navigator.share) {
+      nativo.addEventListener('click', function () {
+        navigator.share({ title: titulo, url: url }).catch(function () {});
+      });
+    } else {
+      nativo.parentNode.removeChild(nativo);
+    }
+  }
+})();
+</script>

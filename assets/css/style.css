@@ -259,6 +259,33 @@ figcaption { font-family:var(--sans); font-size:.82rem; color:var(--muted); line
 .orcid-id__mark { flex-shrink:0; }
 .about-idline { font-family:var(--sans); font-size:.9rem; color:var(--ink-soft); display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
 
+/* ---------- 10b. Compartir y preguntas frecuentes ------------- */
+/* Botones deliberadamente secundarios: el CTA sólido (.btn) es el de la newsletter,
+   que va justo debajo. Si compartir gritara igual, competirían y perderían los dos.
+   Mismo lenguaje visual que .theme-toggle: contorno fino, sans, sin relleno. */
+.compartir { margin-top:1.4em; padding-top:1.6em; border-top:1px solid var(--rule); }
+.compartir__label { font-family:var(--sans); font-size:.92rem; color:var(--ink-soft); margin:0 0 14px; }
+.compartir__acciones { display:flex; flex-wrap:wrap; gap:10px; }
+.compartir__btn {
+  display:inline-flex; align-items:center; white-space:nowrap;
+  font-family:var(--sans); font-size:.85rem; font-weight:600; color:var(--ink-soft);
+  background:transparent; border:1px solid var(--rule-strong); border-radius:2px;
+  padding:9px 14px; cursor:pointer; text-decoration:none;
+  transition:border-color .18s ease, color .18s ease;
+}
+.compartir__btn:hover { border-color:var(--ink-soft); color:var(--ink); }
+/* Mejora progresiva, igual que el toggle de tema: «Copiar» y el menú nativo no
+   hacen nada sin JS, así que sin JS no se pintan. Los tres enlaces siguen ahí. */
+.compartir__btn--js { display:none; }
+.js .compartir__btn--js { display:inline-flex; }
+
+/* Preguntas frecuentes: contenido, no adorno. Se imprime (a diferencia de compartir). */
+.faq { margin-top:1.4em; padding-top:1.6em; border-top:1px solid var(--rule); }
+.faq__titulo { font-family:var(--serif); font-weight:600; font-size:var(--fs-h2); line-height:1.24; letter-spacing:-.01em; }
+.faq__lista { margin:22px 0 0; display:flex; flex-direction:column; gap:1.1em; }
+.faq__item dt { font-family:var(--sans); font-weight:700; font-size:1rem; color:var(--ink); line-height:1.45; }
+.faq__item dd { margin:8px 0 0; color:var(--ink-soft); line-height:1.6; }
+
 /* ---------- 11. Bloque de suscripción ------------------------ */
 .newsletter { background:var(--surface); border:1px solid var(--rule-strong); border-radius:var(--radius); padding:clamp(28px, 5vw, 56px); }
 /* min() en el mínimo: si no caben 280px, la pista se encoge en vez de desbordar */
@@ -344,7 +371,7 @@ main { flex:1; }
   *, *::before, *::after { animation-duration:.001ms !important; transition-duration:.001ms !important; }
 }
 @media print {
-  .site-header .header-actions, .newsletter, .skip-link, .theme-toggle { display:none; }
+  .site-header .header-actions, .newsletter, .skip-link, .theme-toggle, .compartir { display:none; }
   body { background:#fff; color:#000; }
   a { color:#000; text-decoration:underline; }
 }
