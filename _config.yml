@@ -15,13 +15,17 @@ baseurl: ""
 # `defaults` cada pàgina neix amb `page.image` i sí que l'emet. Un `og:image` absent es
 # detecta mirant l'HTML servit, no els logs.
 #
-# PENDENT: una targeta 1200x630 pròpia. Ara hi ha el retrat, que és quadrat i les xarxes
-# l'escapcen pels costats; serveix, però no és el que toca.
+# Hi va la MARCA i no el retrat: qui comparteix un article comparteix la publicació, i una
+# cara sense context en una previsualització de WhatsApp desorienta més que ajuda.
+# La targeta és 1200x630 —la proporció que esperen les xarxes— i el text hi queda dins del
+# quadrat central, perquè els clients que escapcen no se n'emportin les vores.
+# Es va generar amb Chrome headless a partir d'un HTML de disseny; si algun dia canvia el
+# lema o la marca, cal tornar-la a generar (no és un fitxer que es pugui editar a mà).
 defaults:
   - scope:
       path: ""
     values:
-      image: /assets/img/nestor-calbet.jpg
+      image: /assets/img/mesa-docente-card.png
 
 # Autoria: PERSONA, no marca. Mesa Docente és la publicació; qui signa és una persona
 # amb ORCID. Amb `name` de marca, el JSON-LD declarava `Person: "Mesa Docente"` —una marca
