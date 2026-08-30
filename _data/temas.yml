@@ -16,3 +16,11 @@
 - slug: docencia
   nombre: "Criterio docente"
   lema: "Formación y herramientas que fortalezcan el juicio profesional del profesorado."
+# Sisè domini, acceptat el 2026-08-29. Existia de fet des de la 4a tongada: cmd-011
+# (rendició de comptes) i cmd-014 (sobirania del centre) ja portaven `categoria:
+# gobernanza` sense que el blog el conegués. Mentre no va ser aquí, l'eyebrow de
+# l'article queia al `default` i pintava el slug cru, i el seu enllaç a
+# /temas/gobernanza/ hauria estat un 404.
+- slug: gobernanza
+  nombre: "Decidir y responder"
+  lema: "Qué puede decidir de verdad un centro sobre los sistemas que adopta, y quién responde cuando fallan."
