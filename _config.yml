@@ -67,9 +67,12 @@ cf_analytics_token: "916a1eec55f8441c9126e7ffffb494fe"   # Cloudflare Web Analyt
 # Umami Cloud — NO és part de la cascada de dalt: s'activa a banda i conviu amb Cloudflare.
 # Motiu de tenir-lo: Cloudflare Web Analytics no desglossa per campanya i el trànsit que ve
 # d'un correu arriba sense referer → "quant em porta la newsletter" no es pot respondre amb ell.
-# Umami llegeix els UTM. Enganxa aquí el Website ID d'umami.is i fes push.
-# umami_website_id: "________-____-____-____-____________"
-# umami_src: https://cloud.umami.is/script.js   # només si el compte és a la regió EU (canvia el host)
+# Umami llegeix els UTM. ACTIU des del 2026-09-02, compte ncalbet.projectes@gmail.com, regió EU.
+umami_website_id: "4e0f4e64-f43a-4cee-8d9a-999d1b98e036"
+# umami_src NO cal: el layout ja fa servir cloud.umami.is per defecte, i és el host correcte.
+# ⚠ Aquí hi deia "canvia el host si ets a la regió EU". Era una SUPOSICIÓ meva i és FALSA:
+# el compte és a EU (el panell viu a /analytics/eu/) i l'script que dona Umami segueix sent
+# https://cloud.umami.is/script.js — la regió la resol l'ID, no el host.
 
 # jekyll-feed genera /feed.xml automàticament (clau per a l'RSS del blog)
 feed:
