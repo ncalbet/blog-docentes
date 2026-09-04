@@ -3,6 +3,26 @@ layout: post
 category: docencia
 title: "¿Capacitar o descualificar? El silencio incómodo en el debate sobre formación docente en IA"
 description: "Durante una sesión de escucha convocada para recabar la opinión del profesorado sobre la inteligencia artificial en el aula, una docente llamada Sarah…"
+faq:
+  - pregunta: "¿Qué debería incluir la formación del profesorado en inteligencia artificial?"
+    respuesta: >-
+      Los marcos dominantes parten de un supuesto de déficit: el profesorado no sabe
+      suficiente y hay que enseñarle a manejar herramientas. Una formación orientada a la
+      autonomía profesional añadiría la capacidad de identificar cuándo una herramienta
+      produce efectos discriminatorios, de negarse a usarla y de contar con respaldo
+      institucional al hacerlo.
+  - pregunta: "¿La inteligencia artificial vigila el trabajo del profesorado?"
+    respuesta: >-
+      Las herramientas de análisis automatizado del aula miden también a quien enseña:
+      generan métricas sobre su desempeño y las ponen a disposición de terceros. Trabajar
+      bajo supervisión algorítmica constante, sin conocer los criterios con que se evalúa
+      ni poder impugnarlos, es antes que nada una condición laboral.
+  - pregunta: "¿Puede un docente negarse a usar una herramienta de IA?"
+    respuesta: >-
+      Poder rechazar una herramienta que se considera éticamente problemática, sin
+      consecuencias para la evaluación profesional, forma parte de la autonomía docente en
+      sentido pleno. Ninguno de los marcos de formación revisados en este artículo contempla
+      ese margen en esos términos.
 ---
 
 Durante una sesión de escucha convocada para recabar la opinión del profesorado sobre la inteligencia artificial en el aula, una docente llamada Sarah Hampton resumió la cuestión con una precisión que los informes técnicos rara vez alcanzan: "Quiero que la IA me ayude a ver rápida y fácilmente lo que mi estudiante necesita en su trayectoria de aprendizaje" [5]. La frase parece inocente. Pero esconde una pregunta que el debate sobre formación docente en IA prefiere no formular en voz alta: ¿quién decide qué necesita cada estudiante, el docente o el algoritmo? Y, en consecuencia, ¿la formación que recibe el profesorado le da herramientas para responder esa pregunta, o le enseña a ejecutar lo que el sistema ya ha decidido por él?

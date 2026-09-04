@@ -3,6 +3,26 @@ layout: post
 category: autonomia-cognitiva
 title: "Cuando ChatGPT responde antes de que el estudiante pueda preguntarse"
 description: "El instante de duda en que un estudiante no sabe cómo seguir era un umbral productivo. Hoy se salda en segundos con una consulta, y algo se pierde ahí."
+faq:
+  - pregunta: "¿ChatGPT perjudica el pensamiento crítico del alumnado?"
+    respuesta: >-
+      La investigación reciente apunta a que, cuando las respuestas llegan con fluidez y
+      apariencia de autoridad, el alumnado tiende a aceptarlas sin interrogarlas y reduce
+      el monitoreo de su propio razonamiento. El efecto depende en buena medida del diseño
+      de la actividad: la misma herramienta puede funcionar como amplificador cognitivo si
+      sus respuestas se tratan como material provisional que hay que examinar.
+  - pregunta: "¿Qué es el cognitive offloading o descarga cognitiva en el aula?"
+    respuesta: >-
+      Es trasladar a una herramienta externa el esfuerzo de pensar. En clase aparece cuando
+      el estudiante externaliza la pregunta antes de haberla elaborado y cierra la tarea
+      antes de haber pensado, con lo que deja de ejercitar la duda, el error y la
+      autorregulación, que son las condiciones donde se construye el juicio propio.
+  - pregunta: "¿Cómo usar ChatGPT en clase sin que el alumnado deje de pensar?"
+    respuesta: >-
+      Diseñando actividades donde la respuesta de la IA sea el punto de partida del trabajo
+      y haya que contrastarla, reformularla o refutarla con otras fuentes. El conocimiento
+      se trata como provisional y abierto a interrogación, y la tarea de decidir qué vale
+      sigue estando en manos del estudiante.
 ---
 
 Hay un momento pedagógico que los docentes conocen bien: el instante de duda en que un estudiante no sabe cómo continuar. Durante décadas, ese momento fue considerado productivo. Era el umbral desde el que se aprende a buscar, a equivocarse, a reconstruir. Hoy, ese umbral se salda en segundos con una consulta a ChatGPT. Y el problema va más allá de la rapidez: es lo que se pierde en el camino.

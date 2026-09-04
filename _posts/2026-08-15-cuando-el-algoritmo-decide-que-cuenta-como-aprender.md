@@ -3,6 +3,32 @@ layout: post
 category: autonomia-cognitiva
 title: "Cuando el algoritmo decide qué significa aprender"
 description: "Las plataformas adaptativas miden clics, tiempos y aciertos. La duda en voz alta o la pregunta reformulada quedan fuera del modelo, y también son aprendizaje."
+faq:
+  - pregunta: "¿Qué mide realmente una plataforma de aprendizaje adaptativo?"
+    respuesta: >-
+      Mide lo que puede registrar: clics, tiempos de respuesta, aciertos y errores, módulos
+      completados. La discusión en voz alta con un compañero, la pregunta reformulada antes
+      de responderla o la conexión de un concepto con algo vivido fuera del aula quedan
+      fuera del modelo, y también son aprendizaje.
+  - pregunta: "¿Es fiable que un sistema clasifique a un alumno como «en riesgo»?"
+    respuesta: >-
+      Esas etiquetas se construyen con métricas de velocidad, precisión y frecuencia de
+      acceso, y determinan qué contenidos recibirá el estudiante y a qué ritmo. Un acceso
+      poco frecuente puede deberse a una conexión inestable o a una jornada laboral
+      compartida con los estudios, y el sistema no distingue la causa, con lo que puede
+      fijar a la persona en un carril que reproduce su punto de partida.
+  - pregunta: "¿Personalizar el aprendizaje es lo mismo que personalizar los contenidos?"
+    respuesta: >-
+      El aprendizaje adaptativo, tal como se implementa mayoritariamente, ajusta la entrega
+      de contenidos predefinidos según perfiles estadísticos. Quién decide qué variables
+      describen el aprendizaje se resuelve casi siempre fuera del aula y de la institución,
+      y esa decisión tiene consecuencias curriculares directas.
+  - pregunta: "¿Qué derechos del alumnado están en juego con las plataformas adaptativas?"
+    respuesta: >-
+      El derecho a la educación abarca el derecho a no quedar reducido a un perfil, a no
+      tener predeterminado el recorrido intelectual que se considera adecuado para uno y a
+      participar en la definición de qué cuenta como aprender. Ninguno de los tres es
+      cuantificable, y por eso no aparece en los paneles de métricas.
 ---
 
 Un sistema de aprendizaje adaptativo analiza el tiempo que un estudiante tarda en responder, sus clics, sus errores, su progreso por módulos, y con esos datos construye una "ruta personalizada". Así lo describe, sin rodeos, la arquitectura técnica de uno de los sistemas más citados en la literatura reciente: procesa datos de plataformas como Codecademy, Duolingo o Khan Academy —tiempo de respuesta, tasa de finalización, puntuaciones por habilidad— para alimentar redes neuronales que recomiendan el siguiente paso de aprendizaje [1]. El sistema funciona. Pero la pregunta que raramente aparece en los artículos técnicos es otra: ¿quién decidió que esos datos son el aprendizaje?

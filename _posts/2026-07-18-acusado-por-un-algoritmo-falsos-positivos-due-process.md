@@ -3,6 +3,33 @@ layout: post
 category: garantias
 title: "Acusado por un algoritmo: falsos positivos, due process y el precio invisible de equivocarse"
 description: "Una estudiante confía en que el detector de IA acierta, y el docente también. Qué garantías necesita el alumnado cuando una sospecha automática le cuesta cara."
+faq:
+  - pregunta: "¿Son fiables los detectores de IA como Turnitin?"
+    respuesta: >-
+      Turnitin está construido sobre la misma tecnología que pretende fiscalizar y
+      comparte su propensión al error. Ni el alumnado ni el profesorado suelen saber
+      qué mide exactamente ni con qué umbral de certeza emite su veredicto, así que
+      su resultado funciona como indicio para abrir una conversación y se queda muy
+      corto como prueba para sancionar.
+  - pregunta: "¿Se puede suspender a un alumno por el porcentaje que da un detector de IA?"
+    respuesta: >-
+      Un porcentaje de detección incumple las condiciones de un proceso justo: quien
+      es acusado no puede saber qué rasgos de su texto activaron la alerta ni acceder
+      a la lógica interna del sistema para rebatirla. Un expediente basado solo en esa
+      cifra invierte la carga de la prueba y deja al estudiante en la posición de tener
+      que demostrar su inocencia.
+  - pregunta: "¿Qué garantías necesita un estudiante acusado de usar IA en un trabajo?"
+    respuesta: >-
+      Tres, como mínimo. Transparencia sobre qué indicadores activaron el sistema y con
+      qué grado de certeza. Audiencia real para presentar evidencias del proceso de
+      escritura antes de que se decida nada. Y revisión humana obligatoria, de manera
+      que ninguna sanción se adopte con la salida de un detector como única base.
+  - pregunta: "¿Por qué los falsos positivos de los detectores de IA afectan más a unos estudiantes que a otros?"
+    respuesta: >-
+      Quien escribe con herramientas básicas, quien redacta en su segunda lengua o quien
+      usa correctores gramaticales como Grammarly produce textos que el detector marca con
+      más facilidad. En esas condiciones la herramienta acaba midiendo la brecha
+      socioeconómica y lingüística, y opera como un mecanismo de discriminación encubierta.
 ---
 
 Un estudiante de Historia del Arte llamado Nicole confía en que Turnitin es suficiente para detectar el uso de IA con precisión, y concluye que la herramienta "ya basta para comprobar cómo los estudiantes usan la IA y asegurarse de que no todo su trabajo está creado por IA" [1]. La confianza de Nicole en el detector es una percepción construida sobre la opacidad del sistema, sin ninguna base técnica que la respalde. Y ahí reside el problema. Cuando una estudiante cree ciegamente en la infalibilidad de un algoritmo, y cuando los docentes hacen lo mismo para tomar decisiones sancionadoras, la integridad académica deja de ser un valor y se convierte en una ruleta.

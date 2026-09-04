@@ -3,6 +3,32 @@ layout: post
 category: equidad
 title: "Cuando la escuela se vuelve algorítmica, no todos entran por la misma puerta"
 description: "Un sistema de IA en educación superior mostró sesgos en casi todas sus configuraciones, sobre todo por nivel socioeconómico. ¿Para quién funciona, exactamente?"
+faq:
+  - pregunta: "¿La inteligencia artificial en educación reduce las desigualdades entre el alumnado?"
+    respuesta: >-
+      La evidencia disponible apunta en dirección contraria. Un sistema de IA aplicado a la
+      educación superior mostró sesgos sistemáticos en prácticamente todas sus
+      configuraciones, y los atributos que con más frecuencia provocaban decisiones
+      discriminatorias eran el nivel socioeconómico y el nivel educativo de las familias.
+      Los sesgos persistieron incluso tras aplicar técnicas de mitigación.
+  - pregunta: "¿Qué es la brecha digital de segundo nivel?"
+    respuesta: >-
+      La brecha de primer nivel es disponer o no del dispositivo. La de segundo nivel es
+      saber qué hacer con él, con qué profundidad y con qué criterio. Cuando el acceso se
+      generaliza, la desigualdad se desplaza hacia esa competencia de uso, donde el origen
+      socioeconómico sigue pesando con toda su fuerza.
+  - pregunta: "¿Se pueden corregir los sesgos de un sistema de IA educativo?"
+    respuesta: >-
+      Las técnicas de mitigación existen y arrastran problemas propios. En el estudio
+      analizado, corregir el sesgo hizo que un 37,5% de los modelos fallara en criterios de
+      calibración y un 25% en criterios básicos de precisión. Corregir la discriminación sin
+      degradar el sistema sigue siendo hoy un problema abierto.
+  - pregunta: "¿Qué puede hacer un docente ante el sesgo algorítmico en el aula?"
+    respuesta: >-
+      Diseñar materiales que consideren la diversidad socioeconómica, cultural y funcional
+      del grupo, y valorar el uso de cada herramienta con criterios de justicia digital
+      además de eficiencia técnica. Antes que cualquier estrategia hace falta nombrar el
+      problema: saber a quién deja fuera la herramienta que se está usando.
 ---
 
 Un sistema de IA aplicado a la educación superior detectó sesgos sistemáticos en prácticamente todas sus configuraciones, y los atributos que más frecuentemente provocaban decisiones discriminatorias eran el nivel socioeconómico y el nivel educativo de las familias. Esto no ocurrió en un entorno descuidado ni con herramientas obsoletas: ocurrió incluso después de aplicar técnicas de mitigación de sesgos, incluso bajo los umbrales de política más permisivos [4]. Si eso pasa en contextos con recursos y con equipos técnicos dedicados a corregirlo, conviene que nos hagamos una pregunta seria antes de seguir colocando IA en las aulas: ¿para quién funciona esto, exactamente?
