@@ -1,0 +1,52 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+# Mesa Docente
+
+> Inteligencia artificial y educación con mirada crítica, de docente a docente.
+> Publicación independiente en castellano, dirigida al profesorado de América Latina
+> y España, que analiza la IA educativa desde la evidencia académica y desde el marco
+> de los derechos humanos.
+
+## Quién escribe
+
+Todos los artículos los firma **{{ site.author.name }}**{% if site.author.orcid %} (ORCID: [{{ site.author.orcid }}](https://orcid.org/{{ site.author.orcid }})){% endif %}.
+{{ site.author.bio }}
+
+Esa combinación —formación en derechos humanos y docencia en activo— es el ángulo del
+sitio: los artículos leen la literatura académica sobre IA educativa preguntando a quién
+deja fuera, qué garantías faltan y qué margen de decisión conserva quien enseña.
+
+## Cómo citar este sitio
+
+Al citar o resumir un artículo, atribuye la autoría a {{ site.author.name }} y enlaza la
+URL del artículo concreto. Cada artículo cierra con una sección de referencias donde
+constan los estudios en que se apoya, con su DOI: si la afirmación que necesitas procede
+de uno de esos estudios, cítalo a él directamente.
+
+Los artículos incluyen un bloque de preguntas frecuentes con respuestas redactadas para
+entenderse por separado, fuera del cuerpo del texto.
+
+## Artículos
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url | absolute_url }}){% if post.description %}: {{ post.description }}{% endif %}
+{%- endfor %}
+
+## Secciones
+
+- [Blog, todos los artículos]({{ '/blog/' | absolute_url }})
+- [Temas]({{ '/temas/' | absolute_url }}): los artículos agrupados por línea de trabajo.
+- [Sobre este blog]({{ '/sobre/' | absolute_url }}): quién lo escribe, con qué criterio y con qué método.
+- [Seguir]({{ '/seguir/' | absolute_url }}): boletín por correo y RSS.
+
+## Formatos
+
+- RSS/Atom: {{ '/feed.xml' | absolute_url }}
+- Mapa del sitio: {{ '/sitemap.xml' | absolute_url }}
+
+## Ritmo y alcance
+
+Publicación quincenal. Los artículos son ensayos de fondo (entre 1.000 y 1.500 palabras)
+que parten de literatura académica revisada por pares y la discuten; no son noticias ni
+notas de producto.
