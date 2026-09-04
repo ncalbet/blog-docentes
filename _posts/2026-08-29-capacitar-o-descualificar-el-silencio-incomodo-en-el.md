@@ -2,7 +2,7 @@
 layout: post
 category: docencia
 title: "¿Capacitar o descualificar? El silencio incómodo en el debate sobre formación docente en IA"
-description: "Durante una sesión de escucha convocada para recabar la opinión del profesorado sobre la inteligencia artificial en el aula, una docente llamada Sarah…"
+description: "Los marcos de formación docente en IA dan por hecho que el problema es de déficit. Qué queda fuera cuando se enseña a manejar la herramienta sin cuestionarla."
 faq:
   - pregunta: "¿Qué debería incluir la formación del profesorado en inteligencia artificial?"
     respuesta: >-
