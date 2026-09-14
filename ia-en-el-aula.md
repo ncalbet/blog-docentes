@@ -50,8 +50,11 @@ faq:
       <p class="article-dek">Una entrada ordenada a lo que se sabe sobre la IA en educación hasta la fecha. Escrita para quien da clase. Cada apartado responde una pregunta y enlaza el artículo del blog en donde se desarrolla.</p>
       {%- comment -%}
         Fecha de actualización visible, igual que en los artículos: es la señal que dice
-        —al lector y a quien indexa— que el texto sigue mantenido. Aquí se estampa a mano
-        en `last_modified_at`, porque esta página no pasa por `publish.js`.
+        —al lector y a quien indexa— que el texto sigue mantenido. La estampa `publish.js`
+        al subir cada cambio: desde 2026-09-14 esta página también pasa por ahí, porque su
+        entrada en `publish_log.json` lleva el campo `file`. Ese mismo campo es el que hace
+        que el vigilante avise cuando toca revisarla (Pipeline/pagines_fixes.js), así que no
+        se toca a mano.
       {%- endcomment -%}
       {%- assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," -%}
       {%- assign mes_act = page.last_modified_at | date: "%-m" | minus: 1 -%}
