@@ -82,6 +82,13 @@
           <span class="label">Navegar</span>
           <a href="{{ '/' | relative_url }}">Inicio</a>
           <a href="{{ '/blog/' | relative_url }}">Blog (todos los artículos)</a>
+          {%- comment -%}
+            La guía es la página de entrada del sitio para quien llega buscando «IA en
+            el aula» y no conoce el blog. Va enlazada desde el pie, que sale en todas
+            las páginas: una página así sin enlaces entrantes propios no la encuentra
+            nadie, ni quien busca ni quien indexa.
+          {%- endcomment -%}
+          <a href="{{ '/ia-en-el-aula/' | relative_url }}">Guía: IA en el aula</a>
           <a href="{{ '/temas/' | relative_url }}">Temas</a>
           <a href="{{ '/sobre/' | relative_url }}">Sobre este blog</a>
           <a href="{{ '/seguir/' | relative_url }}">Seguir (correo y RSS)</a>
