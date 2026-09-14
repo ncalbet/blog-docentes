@@ -345,6 +345,23 @@ figcaption { font-family:var(--sans); font-size:.82rem; color:var(--muted); line
 .tema-card__lema { font-family:var(--sans); font-size:.92rem; line-height:1.55; color:var(--ink-soft); }
 .tema-card__meta { margin-top:auto; padding-top:6px; font-family:var(--sans); font-size:.85rem; font-weight:600; color:var(--accent-strong); }
 
+/* ---------- 12c. Puerta de entrada («Empieza aquí») ---------- */
+/* Más sobrio que .featured a propósito: acompaña al artículo destacado de la portada,
+   no compite con él. Lo que lo separa del resto es la banda de acento a la izquierda.
+   Reutiliza .eyebrow y .more-link, que ya existen: aquí solo va lo que falta. */
+.empezar {
+  display:block; max-width:760px; text-decoration:none;
+  background:var(--surface); border:1px solid var(--rule-strong);
+  border-left:3px solid var(--accent); border-radius:var(--radius);
+  padding:clamp(20px, 3vw, 28px); transition:border-color .18s ease;
+}
+.empezar:hover { border-color:var(--accent); }
+.empezar__title { font-family:var(--serif); font-weight:600; font-size:var(--fs-h3); line-height:1.2; color:var(--ink); text-wrap:balance; }
+.empezar:hover .empezar__title { color:var(--link-hover); }
+.empezar__text { margin-top:10px; font-family:var(--sans); font-size:.92rem; line-height:1.55; color:var(--ink-soft); max-width:58ch; }
+.empezar .more-link { margin-top:16px; }
+.empezar:hover .more-link { text-decoration:underline; }
+
 /* ---------- 13. Pie --------------------------------------- */
 .site-footer { background:var(--footer-bg); color:var(--footer-fg); margin-top:auto; }
 .site-footer .container { padding-block:clamp(40px, 6vw, 64px); }

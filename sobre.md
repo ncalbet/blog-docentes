@@ -67,6 +67,12 @@ permalink: /sobre/
     </div>
   </div></section>
 
+  <section class="section section--tight">
+    <div class="container">
+      {% include empezar-aqui.html eyebrow="¿Por dónde empiezo?" %}
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       {% include newsletter.html id="nl-sobre" title="Siéntate a la mesa" text="Deja tu correo y recibe cada artículo el día que se publica. Puedes darte de baja cuando quieras." %}

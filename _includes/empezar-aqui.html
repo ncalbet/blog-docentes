@@ -1,0 +1,20 @@
+{%- comment -%}
+  Puerta de entrada del sitio, hacia /ia-en-el-aula/.
+
+  Por qué existe: quien llega buscando «IA en el aula», o desde el perfil, cae en una
+  página suelta y no sabe por dónde seguir. El pie enlaza la guía, pero el pie es el
+  peor sitio del sitio para poner una puerta: no lo mira nadie que esté empezando.
+
+  Un include y no dos bloques copiados: va en la portada y al final de /sobre/, y el
+  texto tiene que decir lo mismo en los dos sitios el día que se cambie.
+
+  La guía NO es una entrada del blog a propósito: vive en /ia-en-el-aula/ sin fecha
+  porque se actualiza en el sitio, no envejece en el archivo. Si algún día se convierte
+  en post, este enlace se rompe y hay que rehacerlo.
+{%- endcomment -%}
+<a class="empezar" href="{{ '/ia-en-el-aula/' | relative_url }}">
+  <p class="eyebrow eyebrow--accent">{{ include.eyebrow | default: '¿Primera vez aquí?' }}</p>
+  <p class="empezar__title">Empieza por la guía: la IA en el aula</p>
+  <p class="empezar__text">Qué aporta la inteligencia artificial en educación, qué riesgos trae al aula y con qué condiciones entra bien. La entrada corta, con la investigación enlazada, a todo lo demás que se publica aquí.</p>
+  <span class="more-link">Leer la guía <span aria-hidden="true">&rarr;</span></span>
+</a>
