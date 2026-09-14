@@ -3,7 +3,7 @@ layout: default
 title: "Inteligencia artificial en el aula: guía para docentes"
 description: "Qué aporta la IA en educación, qué riesgos trae al aula y con qué condiciones entra bien. Guía de entrada para docentes, con la investigación enlazada."
 permalink: /ia-en-el-aula/
-last_modified_at: 2026-09-08
+last_modified_at: 2026-09-14
 faq:
   - pregunta: "¿Qué es la inteligencia artificial en educación?"
     respuesta: >-
@@ -47,7 +47,7 @@ faq:
     <div class="container"><div class="reading">
       <p class="eyebrow">Guía</p>
       <h1 class="hero__title">Inteligencia artificial en el aula: qué dice la investigación</h1>
-      <p class="article-dek">Una entrada ordenada a lo que se sabe sobre la IA en educación, escrita para quien da clase. Cada apartado responde una pregunta y enlaza el artículo donde se desarrolla, con las fuentes a la vista.</p>
+      <p class="article-dek">Una entrada ordenada a lo que se sabe sobre la IA en educación hasta la fecha. Escrita para quien da clase. Cada apartado responde una pregunta y enlaza el artículo del blog en donde se desarrolla.</p>
       {%- comment -%}
         Fecha de actualización visible, igual que en los artículos: es la señal que dice
         —al lector y a quien indexa— que el texto sigue mantenido. Aquí se estampa a mano
@@ -62,18 +62,18 @@ faq:
   <section class="container"><div class="reading">
     <div class="featured">
       <h2 class="featured__title">En corto</h2>
-      <p class="featured__dek">La inteligencia artificial ya está en las aulas de América Latina y España, casi siempre por iniciativa de quien enseña y de quien aprende antes que por una decisión pedagógica del centro. La investigación revisada por pares sostiene tres cosas con bastante consistencia. La primera, que el efecto sobre el aprendizaje depende más del diseño de la actividad que de la herramienta elegida. La segunda, que los sistemas que clasifican o evalúan personas arrastran sesgos que recaen con más peso sobre quien parte con menos recursos. La tercera, que cualquier decisión automática con consecuencias académicas necesita explicación, revisión humana y derecho a réplica. Esta guía reúne esos puntos y enlaza los artículos donde cada uno se desarrolla.</p>
+      <p class="featured__dek">La inteligencia artificial ya está en las aulas de América Latina y España, casi siempre por iniciativa de quien enseña y de quien aprende antes que por una decisión pedagógica del propio centro. La investigación revisada por pares revela tres cuestiones con bastante consistencia. En primer lugar, que el efecto sobre el aprendizaje depende más del diseño de la actividad que de la propia herramienta escogida. La segunda cuestión es que los sistemas que clasifican o evalúan a personas, arrastran sesgos que recaen en su mayoría sobre quien parte con menos recursos. Por último, que cualquier decisión automática con consecuencias académicas requiere de explicación, de revisión humana y de derecho a réplica. Esta guía reúne esos puntos y enlaza los artículos donde cada uno se desarrolla.</p>
     </div>
   </div></section>
 
   <section class="container"><div class="reading prose">
-    <h2>¿Qué cambia en clase cuando el alumnado consulta a una IA?</h2>
-    <p>Cambia el momento de duda. El instante en que un estudiante se queda sin saber cómo continuar era un umbral productivo, y hoy se salda en segundos con una consulta. La literatura llama descarga cognitiva a ese traslado del esfuerzo de pensar hacia una herramienta externa, y observa que cuando la respuesta llega con fluidez y apariencia de autoridad, el alumnado tiende a aceptarla sin interrogarla y deja de vigilar su propio razonamiento.</p>
-    <p>El efecto depende del diseño de la tarea. La misma herramienta que cierra la pregunta antes de tiempo puede sostener el razonamiento si sus respuestas se tratan como material provisional que hay que contrastar con otras fuentes. Ahí se juega la diferencia entre apoyarse en la IA y aprender de ella.</p>
+    <h2>¿Qué cambia en una clase cuando el alumnado consulta a una IA?</h2>
+    <p>Cambia precisamente el momento de duda. En el instante en que un estudiante se queda sin saber cómo continuar era un umbral productivo, que permitía profundizar en el aprendizaje a partir del problema en que se encontraba el alumnado. Hoy se salda en segundos con una consulta en el ordenador o el celular. En la literatura se llama descarga cognitiva a ese traslado del esfuerzo de pensar por uno mismo hacia una herramienta externa, y observa que cuando la respuesta llega rápidamente, con fluidez y apariencia de autoridad, el alumnado tiende a aceptarla sin interrogarla, y deja de desarrollar su propio razonamiento.</p>
+    <p>El efecto depende del diseño de la tarea. La misma herramienta que cierra la pregunta antes de tiempo puede sostener el razonamiento si sus respuestas se tratan como material provisional que hay que contrastar con otras fuentes. Ahí existe la diferencia entre apoyarse en la IA y aprender de o con ella.</p>
     <p><a href="/2026/07/cuando-chatgpt-responde-antes-de-que-el-estudiante/">Cuando ChatGPT responde antes de que el estudiante pueda preguntarse</a>, sobre la duda como umbral de aprendizaje y el diseño pedagógico que la protege.</p>
 
     <h2>¿La IA educativa acorta las desigualdades del aula?</h2>
-    <p>La evidencia disponible apunta en dirección contraria. Un sistema de IA aplicado a la educación superior mostró sesgos sistemáticos en prácticamente todas sus configuraciones, y los atributos que con más frecuencia cambiaban la decisión eran socioeconómicos. Cuando el acceso al dispositivo se generaliza, la desigualdad se desplaza hacia la competencia de uso, que es la brecha digital de segundo nivel: saber qué hacer con la herramienta, con qué profundidad y con qué criterio.</p>
+    <p>La evidencia disponible apunta en dirección contraria, es decir, muestra un augmento de las desigualdades. Un sistema de IA aplicado a la educación superior mostró sesgos sistemáticos en prácticamente todas sus configuraciones, y los atributos que con más frecuencia cambiaban la decisión eran precisamente los socioeconómicos. Cuando el acceso al dispositivo se generaliza, la desigualdad se desplaza hacia la competencia de uso, que es la brecha digital de segundo nivel: saber qué hacer con la herramienta, con qué profundidad y con qué criterio.</p>
     <p>Corregir esos sesgos tiene su propio coste técnico. En el estudio analizado, aplicar técnicas de mitigación hizo que un 37,5% de los modelos fallara en criterios de calibración y un 25% en criterios básicos de precisión. La equidad medida en agregado también puede esconder a quién deja fuera el sistema dentro de cada subgrupo.</p>
     <p><a href="/2026/08/cuando-la-escuela-se-vuelve-algoritmica-no-todos/">Cuando la escuela se vuelve algorítmica, no todos entran por la misma puerta</a>, sobre el sesgo socioeconómico de la IA educativa y la brecha de segundo nivel.</p>
 
