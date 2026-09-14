@@ -35,6 +35,7 @@ entenderse por separado, fuera del cuerpo del texto.
 
 ## Secciones
 
+- [Inteligencia artificial en el aula: guía para docentes]({{ '/ia-en-el-aula/' | absolute_url }}): página de entrada del sitio. Responde en corto qué dice la investigación sobre la IA en educación —efecto según el diseño de la actividad, sesgo de los sistemas que clasifican personas, garantías ante decisiones automáticas— y enlaza el artículo donde cada punto se desarrolla con sus fuentes.
 - [Blog, todos los artículos]({{ '/blog/' | absolute_url }})
 - [Temas]({{ '/temas/' | absolute_url }}): los artículos agrupados por línea de trabajo.
 - [Sobre este blog]({{ '/sobre/' | absolute_url }}): quién lo escribe, con qué criterio y con qué método.
