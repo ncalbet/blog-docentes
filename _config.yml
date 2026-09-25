@@ -45,6 +45,9 @@ author:
   # Identificador de persona (orcid.org/0009-0000-7900-1169). Si es buida aquesta línia,
   # el byline i el JSON-LD deixen de mostrar-lo sols, sense tocar cap plantilla.
   orcid: "0009-0000-7900-1169"
+  # Perfil professional. Entra al `sameAs` de /sobre/ (al costat de l'ORCID) i com a
+  # enllaç `rel="me"` visible a la mateixa pàgina. Buidar-la el treu de tots dos llocs.
+  linkedin: "https://www.linkedin.com/in/nestorcalbet"
 
 markdown: kramdown
 permalink: /:year/:month/:title/
