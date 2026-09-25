@@ -30,6 +30,9 @@ permalink: /sobre/
           la trayectoria y las publicaciones de quien firma, sin fiarse de esta página.
         {%- endcomment -%}
         <p class="about-idline">Identificador público de autor: {% include orcid-id.html %}</p>
+        {%- if site.author.linkedin %}
+        <p class="about-idline">Perfil profesional: <a href="{{ site.author.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></p>
+        {%- endif %}
       </div>
     </div>
 
@@ -130,8 +133,12 @@ permalink: /sobre/
         "@type": "PropertyValue",
         "propertyID": "ORCID",
         "value": "https://orcid.org/{{ site.author.orcid }}"
-      },
-      "sameAs": ["https://orcid.org/{{ site.author.orcid }}"]{% endif %}
+      }{% endif %}{% if site.author.orcid or site.author.linkedin %},
+      "sameAs": [
+        {%- if site.author.orcid %}"https://orcid.org/{{ site.author.orcid }}"{% endif -%}
+        {%- if site.author.orcid and site.author.linkedin %}, {% endif -%}
+        {%- if site.author.linkedin %}{{ site.author.linkedin | jsonify }}{% endif -%}
+      ]{% endif %}
     },
     {
       "@type": "Organization",
