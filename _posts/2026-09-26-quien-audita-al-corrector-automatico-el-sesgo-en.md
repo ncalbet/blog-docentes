@@ -4,6 +4,18 @@ category: garantias
 title: "¿Quién audita al corrector automático? El sesgo en la evaluación"
 description: "¿Qué le pasa al estudiante cuando el algoritmo lo puntúa peor por su grupo? Sesgo, auditoría y derechos en la evaluación automática. Para docentes."
 tags: ["sesgo algorítmico evaluación educativa", "corrector automático sesgo", "equidad algoritmos educación", "bias IA calificaciones", "derechos estudiantes evaluación automática"]
+faq:
+  - pregunta: "¿Puede un corrector automático tener sesgos?"
+    respuesta: "Sí. Si los datos con los que se entrena arrastran sesgos, el modelo los reproduce y penaliza de forma sistemática a quienes se alejan del perfil mayoritario. El sesgo puede entrar en cinco momentos del proceso: la recogida de datos, el etiquetado humano, el preprocesamiento, la extracción de características y la selección del modelo."
+  - pregunta: "¿Cómo se cuela el sesgo en la corrección automática de textos?"
+    respuesta: "A menudo a través de variables que miden algo distinto del conocimiento y que correlacionan con un grupo. Si un sistema de comprensión lectora usa la longitud del texto para predecir la nota, los chicos, que tienden a escribir respuestas más cortas en esas tareas, quedan en desventaja desde el diseño. Y si quienes etiquetaron los textos de entrenamiento conocían el origen migrante del estudiante, ese sesgo queda incrustado en las etiquetas de las que aprende el sistema."
+  - pregunta: "¿Por qué un sistema de evaluación justo en promedio puede perjudicar a algunos estudiantes?"
+    respuesta: "Porque la equidad suele medirse sobre el conjunto o sobre grandes grupos, por ejemplo comparando el error medio entre géneros. Esa métrica agregada puede ocultar subgrupos concretos, como alumnado con TDAH, estudiantes de familias con bajo nivel educativo o hablantes de lenguas minorizadas, que reciben peores puntuaciones de forma sistemática."
+  - pregunta: "¿Qué condiciones debería cumplir un corrector automático para usarse en la evaluación?"
+    respuesta: "Al menos tres: una auditoría por subgrupos publicada, con las tasas de error desagregadas por género, origen, lengua o discapacidad; revisión humana obligatoria, con posibilidad real de impugnación, de toda nota automática que vaya al expediente; y transparencia sobre las tasas de error del sistema, para que profesorado y familias sepan con qué incertidumbre se está calificando."
+  - pregunta: "¿Qué puede hacer un docente si su centro usa corrección automática?"
+    respuesta: "Tratar cada puntuación automática como una estimación provisional y contrastarla con su propio juicio, sobre todo en los grupos que el sistema puede perjudicar. También puede explicar al alumnado que la máquina aprende de datos históricos con sesgos y que una nota baja del sistema puede no reflejar lo que sabe, y abrir ese debate en clase como ejercicio de pedagogía crítica de la IA."
+last_modified_at: 2026-09-30
 ---
 
 Imagina un sistema de corrección automática de textos entrenado mayoritariamente con respuestas de estudiantes de un determinado perfil lingüístico y socioeconómico. El resultado previsible está documentado: "bias in, bias out", es decir, si los datos de entrenamiento arrastran sesgos, el modelo los reproduce y penaliza de forma sistemática a quienes se alejan del perfil mayoritario [1]. Eso ya es serio de por sí, pero la pregunta que nos debería incomodar como docentes debería ser: cuando ese sistema puntúa peor a tu alumna porque escribe en un español marcado por otra lengua materna, ¿quién lo detecta? y ¿Quién puede reclamar?
