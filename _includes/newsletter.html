@@ -38,6 +38,24 @@
         un correo de verificación: el alta queda hecha cuando pulsas su enlace. Llega en
         inglés, cosa del sistema de envíos.
       </p>
+      <p class="newsletter__fine" data-nl-aviso role="status" aria-live="polite" hidden></p>
     </div>
   </div>
+  <script>
+  /* Al pulsar «Suscribirme», recuerda en esta pestaña que el alta se confirma por
+     correo: la respuesta de Buttondown se abre en otra y calla la verificación.
+     NO intercepta el envío (ver el comentario de arriba): escucha `submit` y deja
+     que siga. El aviso sale al pulsar, no cuando Buttondown acepta el alta —eso no
+     se puede saber desde aquí—, así que no dice «hecho» ni «ya estás suscrito». */
+  (function (s) {
+    var bloque = s.parentNode;
+    var form = bloque.querySelector('.newsletter-form');
+    var aviso = bloque.querySelector('[data-nl-aviso]');
+    if (!form || !aviso) return;
+    form.addEventListener('submit', function () {
+      aviso.textContent = 'Revisa tu correo para confirmar la suscripción.';
+      aviso.hidden = false;
+    });
+  })(document.currentScript);
+  </script>
 </div>
