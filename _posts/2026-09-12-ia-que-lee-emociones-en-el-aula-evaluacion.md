@@ -4,6 +4,16 @@ category: privacidad-vigilancia
 title: "IA que lee emociones en el aula: ¿evaluación pedagógica o vigilancia de menores?"
 description: "¿Puede la IA que lee emociones en el aula respetar los derechos del niño? Analizamos la tensión entre evaluación pedagógica y vigilancia biométrica de menores."
 tags: ["vigilancia biométrica en educación", "reconocimiento emocional aula", "privacidad menores IA", "derechos del niño tecnología educativa", "IA gestión aula"]
+faq:
+  - pregunta: "¿Qué es el reconocimiento emocional con IA en el aula?"
+    respuesta: "Son sistemas que intentan inferir el estado emocional y el grado de implicación del alumnado a partir de la cara, la voz, la postura o la mirada. Algunos clasifican a cada estudiante como «implicado» o «desconectado» cada pocos segundos, y casi un tercio de los estudios revisados sobre el tema analiza esos datos en tiempo real."
+  - pregunta: "¿Por qué preocupa la detección de emociones en el aula desde los derechos de la infancia?"
+    respuesta: "Porque convierte al estudiante en un perfil de datos que puede salir del aula hacia la dirección, las familias o plataformas externas, y porque la vigilancia continua presiona la autonomía y la privacidad de quien aprende. Con menores, además, el consentimiento es más difícil: las familias pueden firmar sin saber qué datos se recogen, cuánto tiempo se guardan ni quién accede a ellos, y el alumnado apenas tiene voz en ese proceso."
+  - pregunta: "¿Qué condiciones debería cumplir un sistema de detección emocional para usarse en un centro educativo?"
+    respuesta: "Como mínimo, cuatro: una finalidad concreta fijada antes de usarlo, datos que se quedan en el centro, consentimiento real de las familias con posibilidad de negarse sin consecuencias para el estudiante, y revisión humana de cualquier decisión que le afecte. Quedan fuera en cualquier caso el envío de datos biométricos de menores a las familias en tiempo real y el uso de la lectura emocional para sancionar o clasificar de forma automática."
+  - pregunta: "¿Qué puede hacer un docente ante las tecnologías de vigilancia emocional?"
+    respuesta: "Formarse para leerlas con criterio y abrir espacios de deliberación en el centro: el profesorado que ha reflexionado sobre la ética de las herramientas de IA detecta antes las amenazas a la autonomía del alumnado. También puede trabajar con sus estudiantes qué datos recogen estos sistemas y qué decisiones se toman con ellos, como parte de una pedagogía crítica de la IA."
+last_modified_at: 2026-09-30
 ---
 
 En algunas escuelas de China se han instalado cámaras que registran el número de bostezos de cada estudiante y bandas EEG que miden la concentración y envían esos datos a los padres en tiempo real [1]. Es posible que al leer estas líneas pensemos que es un caso extremo y lejano; o bien, si llevas tiempo entre aulas, que te preguntes cuánto tiempo falta para que alguien te presente algo parecido envuelto en lenguaje pedagógico.
