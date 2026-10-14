@@ -375,6 +375,8 @@ figcaption { font-family:var(--sans); font-size:.82rem; color:var(--muted); line
 .footer-nav a { font-family:var(--sans); font-size:.95rem; color:var(--footer-fg); text-decoration:none; width:fit-content; }
 .footer-nav a:hover { color:var(--footer-link-hover); }
 .footer-legal { margin-top:clamp(32px, 5vw, 48px); padding-top:20px; border-top:1px solid rgba(231,224,208,.16); display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between; font-family:var(--sans); font-size:.82rem; color:var(--footer-muted); }
+.footer-legal a { color:inherit; }
+.footer-legal a:hover { color:var(--footer-link-hover); }
 
 /* ---------- 14. Flujo de página ------------------------------ */
 .page { min-height:100vh; display:flex; flex-direction:column; }
