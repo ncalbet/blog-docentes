@@ -51,7 +51,7 @@ last_modified_at: 2026-10-14
     <ul>
       <li><strong>Alojamiento.</strong> El sitio está alojado en <a href="https://docs.github.com/es/pages/getting-started-with-github-pages/about-github-pages" rel="noopener" target="_blank">GitHub Pages</a> (GitHub, Estados Unidos), que registra la dirección IP de cada visita por motivos de seguridad.</li>
       <li><strong>Estadísticas.</strong> Uso Cloudflare Web Analytics y Umami (en su región europea). Ninguno de los dos instala cookies ni guarda tu dirección IP para seguirte: cuentan visitas, páginas, país y procedencia de forma agregada.</li>
-      <li><strong>Tipografías.</strong> Las fuentes del sitio se descargan de Google Fonts, así que tu navegador hace una petición a los servidores de Google, que reciben tu dirección IP.</li>
+      <li><strong>Tipografías.</strong> Las fuentes se sirven desde el propio sitio: cargar una página no avisa a Google ni a ningún otro servicio de tipografías.</li>
       <li><strong>Modo oscuro.</strong> Si lo activas, tu navegador recuerda la preferencia en su almacenamiento local. Ese dato se queda en tu dispositivo y no llega a ningún servidor.</li>
       <li><strong>Botones de compartir.</strong> Son enlaces normales, sin código de terceros: WhatsApp, LinkedIn o X solo reciben algo si pulsas uno de ellos.</li>
     </ul>
