@@ -30,9 +30,10 @@ faq:
       usa correctores gramaticales como Grammarly produce textos que el detector marca con
       más facilidad. En esas condiciones la herramienta acaba midiendo la brecha
       socioeconómica y lingüística, y opera como un mecanismo de discriminación encubierta.
+last_modified_at: 2026-10-30
 ---
 
-Un estudiante de Historia del Arte llamado Nicole confía en que Turnitin es suficiente para detectar el uso de IA con precisión, y concluye que la herramienta "ya basta para comprobar cómo los estudiantes usan la IA y asegurarse de que no todo su trabajo está creado por IA" [1]. La confianza de Nicole en el detector es una percepción construida sobre la opacidad del sistema, sin ninguna base técnica que la respalde. Y ahí reside el problema. Cuando una estudiante cree ciegamente en la infalibilidad de un algoritmo, y cuando los docentes hacen lo mismo para tomar decisiones sancionadoras, la integridad académica deja de ser un valor y se convierte en una ruleta.
+Una estudiante de Historia del Arte llamada Nicole confía en que Turnitin es suficiente para detectar el uso de IA con precisión, y concluye que la herramienta "ya basta para comprobar cómo los estudiantes usan la IA y asegurarse de que no todo su trabajo está creado por IA" [1]. La confianza de Nicole en el detector es una percepción construida sobre la opacidad del sistema, sin ninguna base técnica que la respalde. Y ahí reside el problema. Cuando una estudiante cree ciegamente en la infalibilidad de un algoritmo, y cuando los docentes hacen lo mismo para tomar decisiones sancionadoras, la integridad académica deja de ser un valor y se convierte en una ruleta.
 
 ## El detector como juez: el problema de la opacidad tecnológica
 
