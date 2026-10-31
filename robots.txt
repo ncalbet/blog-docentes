@@ -1,4 +1,16 @@
+# Las IA pueden encontrar y citar este sitio (búsqueda), pero no entrenarse con su contenido.
+# Rastreadores de entrenamiento, uno por uno; el resto, abiertos.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: CCBot
+User-agent: Bytespider
+Disallow: /
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 Sitemap: https://mesadocente.com/sitemap.xml
