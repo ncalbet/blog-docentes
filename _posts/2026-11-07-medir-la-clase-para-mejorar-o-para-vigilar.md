@@ -1,0 +1,43 @@
+---
+layout: post
+category: docencia
+title: "Medir la clase para mejorar o para vigilar, dos usos posibles de la recolección de datos"
+description: "El mismo dato de aula sirve para mejorar la enseñanza o para vigilar a quien enseña. Qué condiciones harían aceptable medir la docencia sin vigilar."
+tags: ["analítica docente", "vigilancia laboral profesorado", "autonomía profesional docente", "datificación educativa", "evaluación docente opaca"]
+---
+
+Hay un estudio reciente que graba a profesores en formación y profesores con experiencia con gafas de eye-tracking mientras dan una clase de matemáticas; así pueden ver hacia dónde miran cuando circulan entre las mesas y atienden a un alumno o a un grupo pequeño de alumnos [1]. El objetivo declarado en principio es entender mejor la atención del profesorado, esa capacidad de tener treinta focos abiertos a la vez. Pero conviene pararse un momento a pensar: lo que ese dispositivo registra —dónde pone los ojos un docente, durante cuánto tiempo, con qué frecuencia vuelve a un alumno concreto— es exactamente el tipo de dato que, en otras manos y con otro propósito, serviría para construir un informe de desempeño. La pregunta que nos interesa a quienes damos clase se puede plantear entonces en el sentido de si estos datos pueden mejorar en definitiva el criterio profesional o si por el contrario lo sustituyen por el de quien los lee.
+
+## El mismo dato, dos lecturas posibles
+
+La literatura sobre analítica educativa lleva años insistiendo en que los datos de trazas digitales sirven para distintas cosas a la vez, ya sea para dar feedback al alumnado sobre su comprensión, para anticipar el posible riesgo de abandono, para construir una imagen compartida de qué funciona en una institución educativa, así como también para ayudar a decidir cómo repartir recursos [2]. Es una lista honesta, y buena parte es defendible. Sin embargo, no es del todo claro qué pasa cuando nos preguntamos quién decide qué propósito prevalece al mirar. Una revisión sobre ética de datos educativos lo señala con claridad: existe toda una tradición en sociología de la educación dedicada precisamente a criticar la "datificación" creciente de las aulas, pues el mismo flujo de datos que alimenta un panel formativo para el alumno puede alimentar un panel de control institucional [2]. Se trata de la misma tecnología mirada desde dos sillas distintas.
+
+Con el profesorado pasa algo parecido, y aquí es donde el asunto deja de ser abstracto. Un estudio sobre observación automatizada de aula, que compara juicios generados por modelos de lenguaje con un protocolo de observación validado internacionalmente, advierte que estos sistemas forman parte de un proceso más amplio de datificación, la transformación de las interacciones de clase en unos datos cuantificados y legibles por una máquina, un proceso que condiciona la toma de decisiones en todos los niveles del sistema educativo, desde la propia aula hasta la política nacional, y no es exagerar [3]. El propio protocolo que usan como referencia, el TEACH Primary, se aplica en la práctica tanto para el desarrollo profesional formativo como para procesos de evaluación institucional sumativa [3]. Es literalmente el mismo instrumento, las mismas veintiocho conductas observables codificadas como bajo, medio o alto, sirviendo a dos finalidades que no tienen nada que ver entre sí.
+
+## Quién mira decide qué es la mirada
+
+Aquí conviene ser precisos, porque no todo dato docente nace igual de expuesto. Hay evidencia que apunta en una dirección más tranquilizadora: cuando el uso de datos de evaluación por parte del profesorado se estudia como práctica situada, lo que mejor predice que un docente use esos datos de forma productiva es su propia capacidad de interpretación, por delante de la presión de la dirección, y, sobre todo, la colaboración con otros colegas; el liderazgo del centro influye, pero principalmente de forma indirecta, facilitando esa colaboración [4]. Es un hallazgo que merece concederse sin matices: el dato funciona mejor cuando circula entre iguales antes que entre jerarquías. Lo cual, leído en espejo, es también un diagnóstico de lo que falla cuando no circula así.
+
+Porque el mismo corpus de investigación que celebra el potencial formativo de la analítica reconoce, casi al margen, hasta dónde puede llegar el registro: ya existen tecnologías capaces de monitorizar movimientos corporales, ritmo cardíaco, movimiento ocular y expresiones faciales mientras alguien realiza una tarea educativa [2]. Si ese nivel de detalle se aplica al alumnado en nombre de la personalización, no hay ninguna razón estructural por la que no se aplique al profesorado en nombre de la mejora docente. El eye-tracking del estudio de aula [1] no tenía intención de vigilancia. Pero la distancia técnica entre el hecho de grabar la mirada de un docente para investigar su atención distribuida y grabarla en cambio para justificar una evaluación de desempeño es mínima. El contrato es lo que cambia, más que el propio sensor, es decir, quién accede al dato, con qué autoridad lo interpreta y qué consecuencia tiene esa interpretación sobre la carrera de la persona observada.
+
+Otra revisión, esta centrada en alfabetización en IA del profesorado universitario, pone el dedo exactamente ahí, y señala que las instituciones están fallando en gobernar el uso de las herramientas y, más aún, las infraestructuras de datos: los paneles de aprendizaje y los sistemas de seguimiento de rendimiento que cada vez median más la enseñanza y generan datos tanto de estudiantes como de docentes [5]. Fallar en la gobernanza de esto equivale a dejar la pregunta de "para qué sirve este dato" en manos de quien tenga acceso técnico a él, que casi nunca es quien lo genera delante de una clase.
+
+## Lo que haría aceptable medir la docencia
+
+Hay un matiz técnico que conviene retener: cuando los datos de aprendizaje se usan para anticipar qué estudiante necesita apoyo, la evidencia muestra que basta con señales que el propio sistema ya recoge por defecto (días de actividad, entregas, nota media), y que esos indicadores deben calibrarse por programa, no aplicarse de forma uniforme a toda una institución [6]. Es un principio trasladable: el mismo cuidado con el que se pide calibrar un indicador según el contexto disciplinar debería aplicarse a cualquier indicador sobre la práctica docente. Un dato agregado y contextualizado informa; en cambio, un dato individual y descontextualizado, en el panel equivocado, condena.
+
+De ahí se puede extraer una condición razonable. Medir la docencia es defendible cuando el propio claustro elige qué se mide y con qué finalidad, cuando la lectura se hace de forma agregada (de un departamento, de una etapa, nunca de una persona señalada por su nombre en una pantalla que otro controla) y cuando ninguna decisión sobre la carrera de un docente concreto se deriva de un panel en cuyo diseño esa persona no tuvo voz. El derecho a no ser evaluado por un sistema opaco expresa, en el fondo, una exigencia concreta, la de que quien enseña participe en decidir qué cuenta como evidencia de su propio trabajo, y de que esa evidencia sirva para revisar la práctica colectiva antes que para puntuar a nadie en particular. Queda abierta la pregunta de qué claustro tiene realmente hoy en día el tiempo y el mandato real para sentarse a decidir eso antes de que alguien lo haga por él.
+
+## Referencias
+
+[1] Pouta et al. (2026). *Student teachers' and experienced teachers' situation awareness and professional vision in real-life classrooms*. [Ver estudio →](https://doi.org/10.1016/j.tate.2026.105428)
+
+[2] Hakimi et al. (2021). *The Ethics of Using Digital Trace Data in Education: A Thematic Review of the Research Landscape*. [Ver estudio →](https://doi.org/10.3102/00346543211020116)
+
+[3] Melo et al. (2026). *Validating AI-generated classroom observations: Reliability, accuracy, and limits of LLM-based pedagogical judgment*. [Ver estudio →](https://doi.org/10.1016/j.caeai.2026.100612)
+
+[4] Sandvik y Engvik (2026). *Teachers' assessment data use: The roles of capacity, collaboration, and leadership*. [Ver estudio →](https://doi.org/10.1016/j.tate.2026.105653)
+
+[5] Deng et al. (2026). *Governing the unseen: A systematic review of AI literacy among language teachers in higher education*. [Ver estudio →](https://doi.org/10.1016/j.caeai.2026.100658)
+
+[6] Kovor et al. (2026). *Federated learning for privacy-preserving at-risk student prediction in health professional education: A multi-scenario evaluation of FedAvg and FedProx*. [Ver estudio →](https://doi.org/10.1016/j.caeai.2026.100660)
